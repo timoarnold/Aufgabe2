@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=Sofa
+comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Sofa.\n\ \n\ @author\ (Ihr\ Name)\ \n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
+comment1.params=
+comment1.target=Sofa()
+comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Sofa\n
+comment2.params=
+comment2.target=int\ getHolzeinheiten()
+comment2.text=\n\ Ein\ Beispiel\ einer\ Methode\ -\ ersetzen\ Sie\ diesen\ Kommentar\ mit\ Ihrem\ eigenen\n\ \n\ @param\ \ y\ \ \ \ ein\ Beispielparameter\ f\u00FCr\ eine\ Methode\n\ @return\ \ \ \ \ \ \ \ die\ Summe\ aus\ x\ und\ y\n
+comment3.params=
+comment3.target=int\ getSchrauben()
+comment4.params=
+comment4.target=int\ getKissen()
+comment5.params=
+comment5.target=int\ getFarbEinheiten()
+comment6.params=
+comment6.target=int\ getKartoneinheiten()
+comment7.params=
+comment7.target=int\ getProduktionsZeit()
+numComments=8
