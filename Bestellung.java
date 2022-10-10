@@ -2,29 +2,37 @@ import java.util.ArrayList;
 /**
  * Beschreiben Sie hier die Klasse Bestellung.
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author (Gruppe 29) 
+ * @version (Version 2)
  */
 public class Bestellung
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     /** 
-    * Feedback Cha
-    * hier würde ich jede Variabel noch kurz beschreiben. Bspw:
-    * Die Liste bestellteProdukte enthält alle Produkte, die bestellt worden sind
-    * Die bestellBestaetigung gibt an, ob eine Bestellung erfolgreich bestätigt wurde oder nicht (boolean)
-    * Die Beschaffungszeit gibt an, wie lange die Lieferzeit (in Tage) für die Produkte ist
-    * Anzahl der bestellten Stühle / Sofas
+    * InstanzVariablen:
+    * 
+    * Liste bestellteProdukte   = enthält alle Produkte, die bestellt worden sind
+    * bestellBestaetigung       = gibt an, ob eine Bestellung erfolgreich bestätigt wurde oder nicht (boolean)
+    * Beschaffungszeit          = gibt an, wie lange die Lieferzeit (in Tage) für die Produkte ist
+    * Anzahl bestellter S       = gibt an, wie viele Stühle und Sofas in einer Bestellung nachgefragt wurden
     * 
     * fehlt evtl noch der Integer: BeschaffungsZeit? (Die Beschaffungszeit gibt an, wie lange die Lieferzeit (in Tage) für die Produkte ist
+    * Flo: Ist unten aufgeführt und initialisiert. 
+    * In nächsten Schritten wird wohl die Verknüpfung mit Produkt / Sofa / Stuhl nötig sein, um Materialien zu bestellen.
     */
+   
+   
     /**
-     * Klassenvariabeln 
-     * BestellnummerGenerator: Hier direkt auf 1 initialisiert, damit bei jeder neuen Bestellung plus 1 (Siehe "++" im Konstruktor)
+     * Klassenvariablen: 
+     * 
+     * BestellnummerGenerator = Generiert bei der ersten Bestellung die Nummer 1, danach wird bei jeder Bestellung +1 zu dieser Zahl geadded. 
+     * Dies ergibt die Bestellnummer-Variable für jede Bestellung (damit nicht nur die Bestellungsanzahl Total ausgegeben wird)
+     * Hier direkt auf 1 initialisiert, damit Bestellung 1 = 1 & bei jeder neuen Bestellung plus 1 (Siehe "++" im Konstruktor)
      */
     
+    //Klassenvariablen:
     static private int BestellnummerGenerator=1;
-       //intanzvariabeln
+    
+    //intanzvariabeln:
     private ArrayList<Produkt> bestellteProdukte;
     private boolean bestellBestaetigung;
     private int beschaffungsZeit;
@@ -34,25 +42,29 @@ public class Bestellung
     
     /**
     * Feedback Cha
-    * Ich würde hier "für Objekte" weglassen
-    * dafür würde ich noch beschreiben, was passiert. Bspw:
-    * Hier werden alle globalen Variablen initialisiert (?)
     *
     * auch hier würde ich wieder die Kommentare ausserhalb vom Block machen... ist fürs Auge einfacher nachzuvollziehen meiner Meinung nach :)
+    * Flo: Dachte es ist ohne die "//* nicht direkt ersichtlich, welches die Klassenvariablen udn welches die Instanzvariablen sind :)
     * 
     * public Bestellung() --> sollte man hier nicht eingeben können, was man bestellen kkann?
+    * Flo: angepasst :) Es steht Stüehle 1 und Sofas 1, damit unten nicht "anzahlStuehle=anzahlStuehle", da das verwirrend wäre.
+    * 
     * public Bestellung(int bestellungsNr, int anzahlStuehle, int anzahlSofas) --> hier wieder auf Vereinheitlichung von Sofa/sofas, chairs/Stuehle achten...
+    * Flo: Angepasst. bestellungsnummer muss nicht vom Kunden eingegeben werden. Daher hier nicht in Konstruktor.
     * 
     * beim Inhalt bin ich mir noch unsicher bzgl Feedback, sorry!
+    * Flo: Alles gut :)
     */
     
     /**
-     * Konstruktor für Objekte der Klasse Bestellung
+     * Konstruktor der Klasse Bestellung
+     * Dieser initialisiert alle Objekte der Klasse Bestellung
      */
     public Bestellung(int anzahlStuehle1, int anzahlSofas1)
     {
         // Instanzvariable initialisieren
         bestellteProdukte = new ArrayList<Produkt>();
+        
         //Folgende Zeilen wahrscheinlich ändern 
         bestellBestaetigung = false;
         beschaffungsZeit = 0;
@@ -63,10 +75,6 @@ public class Bestellung
 
     /**
      * Methoden:
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
      */
     
     /**
@@ -81,6 +89,10 @@ public class Bestellung
     * }
     * 
     * das gleiche mit Sofas wie oben
+    * 
+    * Flo: Guter Punkt. Aktuell werden die in der BestellungAUfgeben bestellten Stühle und Sofas in der Array bestellungen gespeichert. 
+    * Allenfalls könnte man noch separate Funktionen in der Fabrikklasse erstellen, mit denen man "Total Anzahl Stühle und Total Anzahl Sofas" ausgeben kann.
+    * Das ist jedoch noch nicht in Aufgabe 1 erwähnt als To Do.
     */
     
    
@@ -123,6 +135,9 @@ public class Bestellung
     * Nicht vergessen, die Methoden noch kurz zu beschreiben, was damit passiert...bsp:
     * Mit dieser Methode wird die Anzahl Stühle für die Bestellung ausgegeben
     * wieder schauen, dass wir Stuehle/Sofas vereinheitlichen
+    * 
+    * Flo: Dies sind Methoden, welche im Rahmen der FUnktion bestellungAusgeben in der Fabrikklasse angesprochen werden.
+    * So können die Anzahl Stühle und Sofas sowie die jeweilige Nummer der Bestellung angezeigt werden auf der Konsole.
     */
    
    public int gibBestellNummer()
@@ -143,6 +158,8 @@ public class Bestellung
      /**
     * Feedback Cha
     * können wir auchh noch die Lieferzeit abfragen?
+    * Flo: Ja, können wir analog zu Stühle, Sofas und Nummer einfügen. ABER: die bestellten Mengen müssen dann jeweils zusammengerechnet werden.
+    * Das kann ich mir gerne beim nächstem Mal anschauen :) 
     */
     
 }

@@ -2,66 +2,87 @@ import java.util.ArrayList;
 /**
  * Beschreiben Sie hier die Klasse Fabrik.
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author (Gruppe 29) 
+ * @version (Version 2)
  */
 public class Fabrik
 {
-    // Instanzen gemäss Musterlösung
-    // Feedback Cha: ich würde den untenstehenden Kommentar (und allgemein?) immer oberhalb des Codes machen, für weniger Verwirrung)
-    private ArrayList<Bestellung> bestellungen; //basierend auf Typ Bestellung machen wir eine Liste namens bestellungen
+    /** 
+     * Instanzen gemäss Musterlösung,
+     * Basierend auf Typ Bestellung machen wir eine Liste namens bestellungen
+    */
+   
+    private ArrayList<Bestellung> bestellungen; 
     private int bestellungsNr;
 
     /**
      * Konstruktor für Objekte der Klasse Fabrik
      */
+    
     public Fabrik()
     {
-        // Instanzvariable initialisieren
-        //bestellungen = Liste aller eingetroffenen Bestellungen vom Typ ArrayList
+        /**
+         *Instanzvariable initialisieren
+         *bestellungen = Liste aller eingetroffenen Bestellungen vom Typ ArrayList
+        */
+       
         bestellungen = new ArrayList<Bestellung>();
         bestellungsNr = 0;
     }
 
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * Main-Methode
+     * bisher noch nicht aufgesetzt
      */
     //
     public void main()
     {
-        //
+        //Siehe eingefügt in Notizen aus dem Internet kopiert
+        
+        //public class MainClass {
+    //public static void main(String[] args){
+        //System.out.println("Ausgabe aus der main()-Methode");}
     }
+
+    
     
     /** 
-    * Feedback Cha: Warum ist "chairs" auf Englisch? Und warum sofa im Singular? Ich würde beides auf Deutsch und entweder sg oder pl. :)
-    * Sind die Kommentare innerhalb des Blocks (den geschweiften Klammern) nicht etwas verwirrend?
-    * Wenn man nun eine Bestellung aufgibt, kann man hier schon angeben, ob es Stühle oder Sofas sein sollen? 
+    * Wenn man nun eine Bestellung aufgibt, kann man hier schon angeben, ob es Stühle oder Sofas sein sollen? -->Ja, wird im UI angezeigt :)
     * sagt die Funktion "bestellungen.add(new Bestellung());" dem System das? Oder muss man evtl. mit einer weiteren Funktion vorher angeben, was bestellt wird? 
     * vielleicht so: 
     * bestellungsNr = bestellungsNr+1;
     * Bestellung eineBestellung = new Bestellung(bestellungsNr, sofa, chairs);
     * bestellungen.add(new Bestellung);
+    * 
+    * Flo: Durch bestellungAufgeben wird eine neue Instanz der Klasse Bestellung erstellt und in der Array "bestellungen" gespeichert.
+    * Zudem wird hier festgelegt, dass die Bestellung nur positive Werte enthalten darf (Keine Minusbestellungen).
     */
-    public void bestellungAufgeben(int sofa, int stuhl)
-    {
-           //Bestellung aufgeben -->referenziert Klasse Bestellung und called Konstruktorfunktion von Bestellung
-           //Bestellung der Liste hinzufügen
-           bestellungen.add(new Bestellung(sofa,stuhl));
-           //Bestellungsnummer erhöhen
-           bestellungsNr= bestellungsNr+1;     
-           
-           //Print zur Übersicht
-           System.out.println("Bestellung erfolgreich aufgegeben");
-    }
+    public void bestellungAufgeben(int sofa, int stuhl){
     
-    //public void speichereNotiz(String notiz)
-
-    //{
-      //  notizen.add(notiz);
-    //}
+           /**
+            * Check, ob Bestellungseingabe gültig oder nicht -->Merke: "||" bedeutet hier logisches "oder".
+            * Merke auch "=" ist eine Zuweisung / "==" ein Vergleich
+            */
+          
+          if (sofa<0 || stuhl<0 || sofa+stuhl==0){
+               System.out.println("Bitte geben sie eine positiven Bestellbetrag ein");
+           }
+           else {
+               
+               /**Bestellung aufgeben -->referenziert Klasse Bestellung und callt Konstruktorfunktion von Bestellung
+                * Bestellung der Liste "bestellungen" hinzufügen
+                */
+              
+               bestellungen.add(new Bestellung(sofa,stuhl));
+           
+               //Bestellungsnummer erhöhen
+               bestellungsNr= bestellungsNr+1;     
+           
+               //Print zur Übersicht
+               System.out.println("Bestellung erfolgreich aufgegeben");
+           }
+           
+    }
     
     /**
     * Feedback Cha
@@ -72,26 +93,38 @@ public class Fabrik
     * System.out.println("Beschaffungszeit: " + bestellung.gibBeschaffungsZeit());
     * System.out.println("Bestellbestätigung: " + bestellung.gibBestellBestaetigung());
     * System.out.println();
+    * 
+    * Flo: Ergänzt & unterste 2 get-Funktionen in Dummy-FUnktionen innerhalb Kommentare, 
+    * da noch keine entsprechende Variable in Klasse Bestellung implementiert
     */
-    public void bestellungAusgeben()
-    {
+   
+    public void bestellungAusgeben() {
         //
         /**Für jede "eineBestellung aus der Liste bestellungen, gibt es de unten programmierte Meldung wieder"
          */
          //for(Klasse_BeschreibenderNamefür diese lokale Variable: in Liste bestellungen
         //Jedes El. der Liste "bestellungen" wird unter eineBestellung gespeichert und anschliessend geprintet
         System.out.println("Total Bestellungen bisher:"+bestellungsNr);
+        
         for(Bestellung eineBestellung: bestellungen) {
             
             System.out.println("Bestellnummer:" + eineBestellung.gibBestellNummer());
             System.out.println("Stühle bestellt:" + eineBestellung.gibAnzahlStuehle());
             System.out.println("Sofas bestellt:" + eineBestellung.gibAnzahlSofas());
-
         }
+            
+            /** Aternativ auch noch: 
+             * System.out.println("Beschaffungszeit:" + eineBestellung.gibxxxxxx()); -->Sobald eine entsprechende Variable erstellt in Bestellungen
+             * System.out.println("Bestellbestätigung:" + eineBestellung.gibxxxxx());-->Sobald eine entsprechende Variable erstellt in Bestellungen
+             */
+    
     }
      /**
     * Feedback Cha
     * braucht es noch eine Methode um das Programm zu starten?
+    * 
+    * Flo: Programm wird aktuell durch die Klasse Fabrik gestartet, bei Erstellung einer Instanz. 
+    * Main ist noch to do.
     */
     
 }
