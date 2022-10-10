@@ -83,7 +83,7 @@ public class Bestellung
     
     public boolean gibBestellBestaetigung()
     {
-        return bestellBestaetigung
+        return bestellBestaetigung;
         // nur eingeführ, damit Fehlermeldung weg -->Hier wird wohl noch was kommen, 
         // Cha: macht für mich Sinn
     }

@@ -1,12 +1,12 @@
 #BlueJ class context
 comment0.target=Bestellung
-comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Bestellung.\n\ \n\ @author\ (Ihr\ Name)\ \n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Bestellung.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
 comment1.params=
 comment1.target=Bestellung()
-comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Bestellung\n
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Bestellung\r\n
 comment2.params=
 comment2.target=void\ bestellungBestaetigen()
-comment2.text=\n\ Methoden\:\n\ Ein\ Beispiel\ einer\ Methode\ -\ ersetzen\ Sie\ diesen\ Kommentar\ mit\ Ihrem\ eigenen\n\ \n\ @param\ \ y\ \ \ \ ein\ Beispielparameter\ f\u00FCr\ eine\ Methode\n\ @return\ \ \ \ \ \ \ \ die\ Summe\ aus\ x\ und\ y\n
+comment2.text=\r\n\ Feedback\ Cha\r\n\ Ich\ denke,\ hier\ m\u00FCssen\ wir\ noch\ St\u00FChle\ und\ Sofas\ hinzuf\u00FCgen,\ da\ sobald\ eine\ Bestellung\ eingegangen\ ist,\ die\ St\u00FChle/Sofas\ erh\u00F6hrt\ werden\ m\u00FCssen.\ Bspw.\r\n\ \r\n\ Mit\ dieser\ methode\ wird\ ein\ Stuhl\ erstellt\ und\ zur\ Liste\ der\ bestellten\ Produkte\ hinzugef\u00FCgt\r\n\ private\ void\ stuhlHinzufuegen()\r\n\ {\r\n\ Stuhl\ stuhl\ \=\ new\ Stuhl();\r\n\ \ \ \ bestellteProdukte.add(stuhl);\r\n\ }\r\n\ \r\n\ das\ gleiche\ mit\ Sofas\ wie\ oben\r\n
 comment3.params=
 comment3.target=boolean\ gibBestellBestaetigung()
 comment4.params=neueBeschaffungsZeit
@@ -15,7 +15,7 @@ comment5.params=
 comment5.target=int\ gibBeschaffungszeit()
 comment6.params=
 comment6.target=int\ gibAnzahlStuehle()
-comment6.text=\ Hier\ w\u00FCrde\ kommen\:\ \n\ public\ int\ gibBestellungsNr()\n\ return\ int\ ...\n
+comment6.text=\r\nFeedback\ Cha\r\n\ Nicht\ vergessen,\ die\ Methoden\ noch\ kurz\ zu\ beschreiben,\ was\ damit\ passiert...bsp\:\r\n\ Mit\ dieser\ Methode\ wird\ die\ Anzahl\ St\u00FChle\ f\u00FCr\ die\ Bestellung\ ausgegeben\r\n\ wieder\ schauen,\ dass\ wir\ Stuehle/Sofas\ vereinheitlichen\r\n
 comment7.params=
 comment7.target=int\ gibAnzahlSofas()
 numComments=8
