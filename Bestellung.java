@@ -18,9 +18,17 @@ public class Bestellung
     * 
     * fehlt evtl noch der Integer: BeschaffungsZeit? (Die Beschaffungszeit gibt an, wie lange die Lieferzeit (in Tage) für die Produkte ist
     */
+    /**
+     * Klassenvariabeln 
+     * BestellnummerGenerator: Hier direkt auf 1 initialisiert, damit bei jeder neuen Bestellung plus 1 (Siehe "++" im Konstruktor)
+     */
+    
+    static private int BestellnummerGenerator=1;
+       //intanzvariabeln
     private ArrayList<Produkt> bestellteProdukte;
     private boolean bestellBestaetigung;
     private int beschaffungsZeit;
+    private int bestellNummer;
     private int anzahlStuehle;
     private int anzahlSofas;
     
@@ -41,15 +49,16 @@ public class Bestellung
     /**
      * Konstruktor für Objekte der Klasse Bestellung
      */
-    public Bestellung()
+    public Bestellung(int anzahlStuehle1, int anzahlSofas1)
     {
         // Instanzvariable initialisieren
         bestellteProdukte = new ArrayList<Produkt>();
         //Folgende Zeilen wahrscheinlich ändern 
         bestellBestaetigung = false;
         beschaffungsZeit = 0;
-        anzahlStuehle = 0;
-        anzahlSofas = 0;
+        bestellNummer = BestellnummerGenerator++;
+        anzahlStuehle = anzahlStuehle1;
+        anzahlSofas = anzahlSofas1;
     }
 
     /**
@@ -115,6 +124,12 @@ public class Bestellung
     * Mit dieser Methode wird die Anzahl Stühle für die Bestellung ausgegeben
     * wieder schauen, dass wir Stuehle/Sofas vereinheitlichen
     */
+   
+   public int gibBestellNummer()
+    {
+        return bestellNummer;
+    }
+    
     public int gibAnzahlStuehle()
     {
         return anzahlStuehle;

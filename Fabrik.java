@@ -45,11 +45,11 @@ public class Fabrik
     * Bestellung eineBestellung = new Bestellung(bestellungsNr, sofa, chairs);
     * bestellungen.add(new Bestellung);
     */
-    public void bestellungAufgeben(int sofa, int chairs)
+    public void bestellungAufgeben(int sofa, int stuhl)
     {
            //Bestellung aufgeben -->referenziert Klasse Bestellung und called Konstruktorfunktion von Bestellung
            //Bestellung der Liste hinzufügen
-           bestellungen.add(new Bestellung());
+           bestellungen.add(new Bestellung(sofa,stuhl));
            //Bestellungsnummer erhöhen
            bestellungsNr= bestellungsNr+1;     
            
@@ -75,10 +75,18 @@ public class Fabrik
     */
     public void bestellungAusgeben()
     {
-        //for(Klasse_BeschreibenderNamefür diese lokale Variable: in Liste bestellungen
+        //
+        /**Für jede "eineBestellung aus der Liste bestellungen, gibt es de unten programmierte Meldung wieder"
+         */
+         //for(Klasse_BeschreibenderNamefür diese lokale Variable: in Liste bestellungen
         //Jedes El. der Liste "bestellungen" wird unter eineBestellung gespeichert und anschliessend geprintet
+        System.out.println("Total Bestellungen bisher:"+bestellungsNr);
         for(Bestellung eineBestellung: bestellungen) {
-            System.out.println(eineBestellung);
+            
+            System.out.println("Bestellnummer:" + eineBestellung.gibBestellNummer());
+            System.out.println("Stühle bestellt:" + eineBestellung.gibAnzahlStuehle());
+            System.out.println("Sofas bestellt:" + eineBestellung.gibAnzahlSofas());
+
         }
     }
      /**
