@@ -9,6 +9,12 @@ public class Produkt
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     //Zustandsvariable ist hier global, da public definiert = auch von anderen Klassen aufrufbar mit "Produkt.zustand"
+    
+    /**
+    * Feedback Cha
+    * vielleicht in den Kommentaren noch kurz beschreiben, was es für verschiedene Zustände gibt? 1: Bestellt, 2: In Produktion, 3: Bereit für Auslieferung, 4: Ausgeliefert
+    */
+    
     public int zustand;
 
     /**
