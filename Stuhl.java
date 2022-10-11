@@ -44,6 +44,19 @@ public class Stuhl extends Produkt
     //
     
     //Exemplar einer set-Funktion (falls später benötigt) -->käme jeweils vor get-Funktion.
+    
+    /** 
+    * Feedback Cha
+    * In Kommentaren noch kurz erklären, was bei diesen Methoden passsiert:
+    * Angabe Anzahl Holzeinheiten (etc.)
+    *
+    * Input Bennenung der Methoden: wollen wir diese noch Stuhl und Sofa-spezifisch machen? 
+    * sonst versteht ja das Programm und wir nicht, ob wir getHolzeinheiten für Stühle oder Sofas wollen... Bspw: public int getholzeinheitenStuhl()
+    *
+    * Frage: wieso haben wir hier diese Methode? --> "public void setHolzeinheiten..." werden diese Einheiten nicht im Lager aufgegeben (beim Einkauf)?
+    *
+    */
+    
     public void setHolzeinheiten(int HolzFuerStuhl){
         holzeinheiten = HolzFuerStuhl;
     }
