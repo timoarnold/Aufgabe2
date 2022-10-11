@@ -1,5 +1,10 @@
 
 /**
+* Feedback Cha: analog zu Stuhl
+*/
+
+
+/**
  * Beschreiben Sie hier die Klasse Sofa.
  * 
  * @author (Ihr Name) 
