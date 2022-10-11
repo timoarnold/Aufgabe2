@@ -6,6 +6,13 @@
  * @version (eine Versionsnummer oder ein Datum)
  */
 //Subklasse von Klasse Produkt (Übernimmt alle Attribute/Var & Methoden von Oberklasse)
+
+/**
+* Feedback Cha
+* siehe mein Kommentar in Miro über static variables: könnte die Produktionszeit eine solche sein? anstatt private int, private static int? warum?
+* weil die Produktionszeit auch von den Sofas abhängig ist oder? es würde es flexibler machen, wenn diese Variable gemäss Google Definition nicht an diese "instance" gebunden ist, sondern an die Klasse "Produkt"
+*/
+
 public class Stuhl extends Produkt
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
@@ -18,6 +25,13 @@ public class Stuhl extends Produkt
     /**
      * Konstruktor für Objekte der Klasse Stuhl
      */
+     
+     /**
+     * Feedback Cha
+     * müssen wir hier nicht Angeben, was ein Stuhl tatsächlichh für Einheiten braucht?
+     *
+     */
+     
     public Stuhl()
     {
         // Instanzvariable initialisieren
