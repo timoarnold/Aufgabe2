@@ -1,9 +1,9 @@
 #BlueJ package file
-dependency1.from=Fabrik
-dependency1.to=Bestellung
+dependency1.from=Bestellung
+dependency1.to=Produkt
 dependency1.type=UsesDependency
-dependency2.from=Bestellung
-dependency2.to=Produkt
+dependency2.from=Fabrik
+dependency2.to=Bestellung
 dependency2.type=UsesDependency
 editor.fx.0.height=737
 editor.fx.0.width=814
@@ -69,5 +69,5 @@ target6.name=Testklasse
 target6.showInterface=false
 target6.type=UnitTestTargetJunit5
 target6.width=120
-target6.x=60
+target6.x=70
 target6.y=20
