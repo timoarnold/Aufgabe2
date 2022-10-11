@@ -33,7 +33,7 @@ public class Bestellung
     //Klassenvariablen:
     static private int BestellnummerGenerator=1;
     
-    //intanzvariabeln:
+    //Intanzvariablen:
     private ArrayList<Produkt> bestellteProdukte;
     private boolean bestellBestaetigung;
     private int beschaffungsZeit;
