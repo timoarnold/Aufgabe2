@@ -78,8 +78,9 @@ public class FabrikTest
         
         //3. Assert
         assertEquals("Bestellnummer:"+1+"\nStühle bestellt:"+2+"\nSofas bestellt:"+3,Testfabrik.gibBestellungen().get(0).toString());
+        assertEquals("Bestellnummer:"+2+"\nStühle bestellt:"+6+"\nSofas bestellt:"+6,Testfabrik.gibBestellungen().get(1).toString());
         /**
-         * Hier wird getestet, ob die erste (Index 0) Bestellung der ArrayList bestellungen den Erwartungen entspricht.
+         * Hier wird getestet, ob die erste (Index 0) und die zweite (Index 1) Bestellung der ArrayList bestellungen den Erwartungen entspricht.
          * Merke: Testfabrik.gibBestellungen().get(0).toString() entspricht System.out.println(eineBestellung) aus Fabrik.bestellungAusgeben
          */
     
