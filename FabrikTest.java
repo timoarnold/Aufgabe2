@@ -28,6 +28,7 @@ public class FabrikTest
     @BeforeEach
     public void setUp()
     {
+        
     }
 
     /**
@@ -42,7 +43,28 @@ public class FabrikTest
     
     
     @Test
-    public void testmethodenname(){
+    public void TestBestellungsNummer(){
+        //Hier Tests eingeben, die ich machen will -->Notizen = Übungsstunde
+        //Beispiel: Objekttest:
+        
+        //1. Arrange:
+        Fabrik Testfabrik = new Fabrik();
+        
+        //2. Act
+        Testfabrik.bestellungAufgeben(2,3);
+        Testfabrik.bestellungAufgeben(1,1);
+
+        //3. Assert
+        assertEquals(2, Testfabrik.gibBestellungsNr());
+        
+        /**
+         * Getestet, ob richtige Bestellnummer, wenn Instanz Fabrik 
+         * erzeugt und 2 Testbestellungen aufgegeben.
+         */
+    }
+    
+    @Test
+    public void TestBestellungAusgeben(){
         //Hier Tests eingeben, die ich machen will -->Notizen = Übungsstunde
         //Beispiel: Objekttest:
         
@@ -63,3 +85,4 @@ public class FabrikTest
         //Lösungen sind bei wöchentlichen Lösungen hochgeladen.
     }
 }
+

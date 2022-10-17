@@ -86,6 +86,10 @@ public class Fabrik
            
     }
     
+    public int gibBestellungsNr(){
+        return bestellungsNr;
+    }
+    
     /**
     * Feedback Cha
     * Hier muss meiner Meinung rein, was geprintet werden soll. Untenstehend mein Input:
