@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.io.*;
 /**
  * Beschreiben Sie hier die Klasse Fabrik.
  * 
@@ -35,14 +36,29 @@ public class Fabrik
      * bisher noch nicht aufgesetzt
      */
     //
-    public void main()
-    {
-        //Siehe eingefügt in Notizen aus dem Internet kopiert
+    
+    public static void main(String[] args){
+                 
+        //String anzStuhl, anzSofa;
+        //int sofa, stuhl, anzahlStuehle1, anzahlSofas1;
         
-        //public class MainClass {
-    //public static void main(String[] args){
-        //System.out.println("Ausgabe aus der main()-Methode");}
+        System.out.println("Ausgabe aus der main()-Methode:");
+        
+        //anzahlSofas1 = Integer.parseInt(args[0]);
+        //anzahlStuehle1 = Integer.parseInt(args[1]);
+        
+        //Fabrik Test1= new Fabrik();
+        
+        ////1:1 so aus VL-Folien eigefügt:
+        //BufferedReader infile =
+        //new BufferedReader ( new InputStreamReader (System.in));
+        //System.out.println("Bitte gib die Anzahl Sofas an, die du bestellen möchtest");
+        
+        
     }
+        //fakrik1 = new Fabrik ();
+        //While / for-Schleife: Solang nicht XY passiert, geht die Main-Methode alles durch und gibt XY aus..
+    
 
     
     

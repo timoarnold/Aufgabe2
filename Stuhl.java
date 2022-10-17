@@ -16,6 +16,7 @@
 public class Stuhl extends Produkt
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
+    //MRERKE: Hier sollte als erstes noch der Konstruktor der Klasse Produkt angesprochen werden /Gleiches Gilt für Sofa!!! -->VL 4
     private int holzeinheiten;
     private int schrauben;
     private int farbeinheiten;
