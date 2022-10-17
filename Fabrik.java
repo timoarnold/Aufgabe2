@@ -90,6 +90,10 @@ public class Fabrik
         return bestellungsNr;
     }
     
+    public ArrayList<Bestellung> gibBestellungen(){
+        return bestellungen;
+    }
+    
     /**
     * Feedback Cha
     * Hier muss meiner Meinung rein, was geprintet werden soll. Untenstehend mein Input:
@@ -104,7 +108,7 @@ public class Fabrik
     * da noch keine entsprechende Variable in Klasse Bestellung implementiert
     */
    
-    public void bestellungAusgeben() {
+    public void bestellungenAusgeben() {
         //
         /**Für jede "eineBestellung aus der Liste bestellungen, gibt es de unten programmierte Meldung wieder"
          */
@@ -114,9 +118,8 @@ public class Fabrik
         
         for(Bestellung eineBestellung: bestellungen) {
             
-            System.out.println("Bestellnummer:" + eineBestellung.gibBestellNummer());
-            System.out.println("Stühle bestellt:" + eineBestellung.gibAnzahlStuehle());
-            System.out.println("Sofas bestellt:" + eineBestellung.gibAnzahlSofas());
+            System.out.println(eineBestellung);
+            
         }
             
             /** Aternativ auch noch: 
@@ -125,12 +128,22 @@ public class Fabrik
              */
     
     }
-     /**
-    * Feedback Cha
-    * braucht es noch eine Methode um das Programm zu starten?
-    * 
-    * Flo: Programm wird aktuell durch die Klasse Fabrik gestartet, bei Erstellung einer Instanz. 
-    * Main ist noch to do.
-    */
     
+    public void bestellungAusgeben(int spannendeBestellungNr) {
+        //
+        /**
+         * Gibt spezifische Bestellung wider
+         */
+        
+        System.out.println("Details der Bestellung mit der Nummer:" + spannendeBestellungNr);
+        
+        for(Bestellung eineBestellung: bestellungen) {
+            
+            if(spannendeBestellungNr==eineBestellung.gibBestellNummer()){
+            System.out.println(eineBestellung);
+            }
+    
+        }
+    
+    }
 }

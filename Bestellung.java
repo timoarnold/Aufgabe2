@@ -121,6 +121,10 @@ public class Bestellung
         return beschaffungsZeit;
     }
     
+    public String toString(){
+        return "Bestellnummer:" + this.gibBestellNummer()+ "\nStühle bestellt:" + this.gibAnzahlStuehle()+ "\nSofas bestellt:" + this.gibAnzahlSofas();
+    }
+    
     /** Hier würde kommen: 
      * public int gibBestellungsNr()
      * return int ...

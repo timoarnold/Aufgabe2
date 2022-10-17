@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import java.util.ArrayList;
 
 /**
  * Die Test-Klasse FabrikTest.
@@ -69,20 +70,19 @@ public class FabrikTest
         //Beispiel: Objekttest:
         
         //1. Arrange:
-        //Bestellung Bestellung = new bestellung();
-        //student.addCourseByIds(new int[} {23,52,12,67});
+        Fabrik Testfabrik = new Fabrik();
         
         //2. Act
-        //Course course = student.findCourseById(67); -->Diese Methode wird getestet
-        //Course courseNull = student.findCourseById(11); -->Falls es den Kurs nicht gibt (abdecken)
+        Testfabrik.bestellungAufgeben(2,3);
+        Testfabrik.bestellungAufgeben(6,6);
         
         //3. Assert
-        //assert<Objekt>(course);
-        //assertEquals(67, course.getId()); -->Hat etwas den Wert, den wir möchten? Hat Kurs 67 auch wirklich die ID 67?
-        //assertNull(courseNull);
-        
-        //Fazit:  getestet ob es den Kurs gibt, ob die ID richtig ist und was ist, wenn ein Kurs ==NUll ist.
-        //Lösungen sind bei wöchentlichen Lösungen hochgeladen.
+        assertEquals("Bestellnummer:"+1+"\nStühle bestellt:"+2+"\nSofas bestellt:"+3,Testfabrik.gibBestellungen().get(0).toString());
+        /**
+         * Hier wird getestet, ob die erste (Index 0) Bestellung der ArrayList bestellungen den Erwartungen entspricht.
+         * Merke: Testfabrik.gibBestellungen().get(0).toString() entspricht System.out.println(eineBestellung) aus Fabrik.bestellungAusgeben
+         */
+    
     }
 }
 
