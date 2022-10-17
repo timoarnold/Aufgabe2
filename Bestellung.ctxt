@@ -4,6 +4,8 @@ comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Bestellung.\r\n\ \r\n\ 
 comment1.params=anzahlStuehle1\ anzahlSofas1
 comment1.target=Bestellung(int,\ int)
 comment1.text=\r\n\ Konstruktor\ der\ Klasse\ Bestellung\r\n\ Dieser\ initialisiert\ alle\ Objekte\ der\ Klasse\ Bestellung\r\n
+comment10.params=
+comment10.target=void\ resetBestellnummerGenerator()
 comment2.params=
 comment2.target=void\ bestellungBestaetigen()
 comment2.text=\r\n\ Feedback\ Cha\r\n\ Ich\ denke,\ hier\ m\u00FCssen\ wir\ noch\ St\u00FChle\ und\ Sofas\ hinzuf\u00FCgen,\ da\ sobald\ eine\ Bestellung\ eingegangen\ ist,\ die\ St\u00FChle/Sofas\ erh\u00F6hrt\ werden\ m\u00FCssen.\ Bspw.\r\n\ \r\n\ Mit\ dieser\ methode\ wird\ ein\ Stuhl\ erstellt\ und\ zur\ Liste\ der\ bestellten\ Produkte\ hinzugef\u00FCgt\r\n\ private\ void\ stuhlHinzufuegen()\r\n\ {\r\n\ Stuhl\ stuhl\ \=\ new\ Stuhl();\r\n\ \ \ \ bestellteProdukte.add(stuhl);\r\n\ }\r\n\ \r\n\ das\ gleiche\ mit\ Sofas\ wie\ oben\r\n\ \r\n\ Flo\:\ Guter\ Punkt.\ Aktuell\ werden\ die\ in\ der\ BestellungAUfgeben\ bestellten\ St\u00FChle\ und\ Sofas\ in\ der\ Array\ bestellungen\ gespeichert.\ \r\n\ Allenfalls\ k\u00F6nnte\ man\ noch\ separate\ Funktionen\ in\ der\ Fabrikklasse\ erstellen,\ mit\ denen\ man\ "Total\ Anzahl\ St\u00FChle\ und\ Total\ Anzahl\ Sofas"\ ausgeben\ kann.\r\n\ Das\ ist\ jedoch\ noch\ nicht\ in\ Aufgabe\ 1\ erw\u00E4hnt\ als\ To\ Do.\r\n
@@ -22,4 +24,4 @@ comment8.params=
 comment8.target=int\ gibAnzahlStuehle()
 comment9.params=
 comment9.target=int\ gibAnzahlSofas()
-numComments=10
+numComments=11

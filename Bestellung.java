@@ -160,6 +160,9 @@ public class Bestellung
         return anzahlSofas;
     }
     
+    public static void resetBestellnummerGenerator(){
+        BestellnummerGenerator = 1;
+    }
      /**
     * Feedback Cha
     * können wir auchh noch die Lieferzeit abfragen?

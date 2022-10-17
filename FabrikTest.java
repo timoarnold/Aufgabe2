@@ -40,6 +40,7 @@ public class FabrikTest
     @AfterEach
     public void tearDown()
     {
+        
     }
     
     
@@ -83,6 +84,27 @@ public class FabrikTest
          * Hier wird getestet, ob die erste (Index 0) und die zweite (Index 1) Bestellung der ArrayList bestellungen den Erwartungen entspricht.
          * Merke: Testfabrik.gibBestellungen().get(0).toString() entspricht System.out.println(eineBestellung) aus Fabrik.bestellungAusgeben
          */
+    
+    }
+    
+    @Test
+    public void TestBestellungAufgeben(){
+        
+        
+        //1. Arrange:
+         Fabrik Testfabrik = new Fabrik();
+        //Bestellung Testbestellung = new Bestellung(4,7);
+        
+        //2. Act
+         Testfabrik.bestellungAufgeben(4,7);
+        
+        
+        //3. Assert
+        assertEquals(4, Testfabrik.gibBestellungen().get(0).gibAnzahlStuehle());
+        assertEquals(7, Testfabrik.gibBestellungen().get(0).gibAnzahlSofas());
+        
+        Bestellung.resetBestellnummerGenerator();
+        
     
     }
 }
