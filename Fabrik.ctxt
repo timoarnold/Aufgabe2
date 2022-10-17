@@ -6,7 +6,7 @@ comment1.target=Fabrik()
 comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Fabrik\r\n
 comment2.params=args
 comment2.target=void\ main(java.lang.String[])
-comment2.text=\r\n\ Main-Methode\r\n\ bisher\ noch\ nicht\ aufgesetzt\r\n
+comment2.text=\r\n\ Main-Methode\r\n\ Flo\:\ Hier\ w\u00E4re\ ich\ froh\ um\ Hilfe\r\n
 comment3.params=sofa\ stuhl
 comment3.target=void\ bestellungAufgeben(int,\ int)
 comment3.text=\ \r\n\ Wenn\ man\ nun\ eine\ Bestellung\ aufgibt,\ kann\ man\ hier\ schon\ angeben,\ ob\ es\ St\u00FChle\ oder\ Sofas\ sein\ sollen?\ -->Ja,\ wird\ im\ UI\ angezeigt\ \:)\r\n\ sagt\ die\ Funktion\ "bestellungen.add(new\ Bestellung());"\ dem\ System\ das?\ Oder\ muss\ man\ evtl.\ mit\ einer\ weiteren\ Funktion\ vorher\ angeben,\ was\ bestellt\ wird?\ \r\n\ vielleicht\ so\:\ \r\n\ bestellungsNr\ \=\ bestellungsNr+1;\r\n\ Bestellung\ eineBestellung\ \=\ new\ Bestellung(bestellungsNr,\ sofa,\ chairs);\r\n\ bestellungen.add(new\ Bestellung);\r\n\ \r\n\ Flo\:\ Durch\ bestellungAufgeben\ wird\ eine\ neue\ Instanz\ der\ Klasse\ Bestellung\ erstellt\ und\ in\ der\ Array\ "bestellungen"\ gespeichert.\r\n\ Zudem\ wird\ hier\ festgelegt,\ dass\ die\ Bestellung\ nur\ positive\ Werte\ enthalten\ darf\ (Keine\ Minusbestellungen).\r\n

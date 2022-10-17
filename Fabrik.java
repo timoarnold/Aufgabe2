@@ -33,31 +33,17 @@ public class Fabrik
 
     /**
      * Main-Methode
-     * bisher noch nicht aufgesetzt
+     * Flo: Hier wäre ich froh um Hilfe
      */
     //
     
     public static void main(String[] args){
-                 
-        //String anzStuhl, anzSofa;
-        //int sofa, stuhl, anzahlStuehle1, anzahlSofas1;
         
         System.out.println("Ausgabe aus der main()-Methode:");
-        
-        //anzahlSofas1 = Integer.parseInt(args[0]);
-        //anzahlStuehle1 = Integer.parseInt(args[1]);
-        
-        //Fabrik Test1= new Fabrik();
-        
-        ////1:1 so aus VL-Folien eigefügt:
-        //BufferedReader infile =
-        //new BufferedReader ( new InputStreamReader (System.in));
-        //System.out.println("Bitte gib die Anzahl Sofas an, die du bestellen möchtest");
-        
-        
+        Fabrik x= new Fabrik();
+               
     }
-        //fakrik1 = new Fabrik ();
-        //While / for-Schleife: Solang nicht XY passiert, geht die Main-Methode alles durch und gibt XY aus..
+        //ev While / for-Schleife: Solang nicht XY passiert, geht die Main-Methode alles durch und gibt XY aus..
     
 
     
