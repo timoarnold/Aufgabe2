@@ -17,14 +17,11 @@ public class Stuhl extends Produkt
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     //MRERKE: Hier sollte als erstes noch der Konstruktor der Klasse Produkt angesprochen werden /Gleiches Gilt für Sofa!!! -->VL 4
-    private int holzeinheiten;
-    private int schrauben;
-    private int farbeinheiten;
-    private int kartoneinheiten;
-    private int produktionsZeit;
+    
 
     /**
      * Konstruktor für Objekte der Klasse Stuhl
+     * Hier Variabeln einfügen, die in Produkt nicht enthalten, für Stuhl jedoch notwendig
      */
      
      /**
@@ -36,11 +33,7 @@ public class Stuhl extends Produkt
     public Stuhl()
     {
         // Instanzvariable initialisieren
-        holzeinheiten =0;
-        schrauben = 0;
-        farbeinheiten =0;
-        kartoneinheiten =0;
-        produktionsZeit =0;
+        super(zustand, holzeinheiten, schrauben, farbeinheiten,kartoneinheiten, produktionsZeit);
     }
 
     /**

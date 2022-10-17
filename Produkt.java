@@ -15,15 +15,25 @@ public class Produkt
     * vielleicht in den Kommentaren noch kurz beschreiben, was es für verschiedene Zustände gibt? 1: Bestellt, 2: In Produktion, 3: Bereit für Auslieferung, 4: Ausgeliefert
     */
     
-    public int zustand;
+    private int zustand;
+    private int holzeinheiten;
+    private int schrauben;
+    private int farbeinheiten;
+    private int kartoneinheiten;
+    private int produktionsZeit;
 
     /**
      * Konstruktor für Objekte der Klasse Produkt
      */
-    public Produkt()
+    public Produkt(int zustand, int holzeinheiten, int schrauben, int farbeinheiten, int kartoneinheiten, int produkttionsZeit)
     {
         // Instanzvariable initialisieren
         zustand = 0;
+        holzeinheiten =0;
+        schrauben = 0;
+        farbeinheiten =0;
+        kartoneinheiten =0;
+        produktionsZeit =0;
     }
 
     /**

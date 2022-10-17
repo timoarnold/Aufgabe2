@@ -14,12 +14,7 @@
 public class Sofa extends Produkt
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int holzeinheiten;
-    private int schrauben;
     private int kissen;
-    private int farbeinheiten;
-    private int kartoneinheiten;
-    private int produktionsZeit;
 
     /**
      * Konstruktor für Objekte der Klasse Sofa
@@ -27,12 +22,9 @@ public class Sofa extends Produkt
     public Sofa()
     {
         // Instanzvariable initialisieren -->nochmals anpassen
-        holzeinheiten = 0;
-        schrauben = 0;
+        super(zustand, holzeinheiten, schrauben, farbeinheiten,kartoneinheiten, produktionsZeit); 
         kissen = 0;
-        farbeinheiten = 0;
-        kartoneinheiten = 0;
-        produktionsZeit =0;
+       
     }
 
     /**
