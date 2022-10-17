@@ -25,7 +25,7 @@ public class Produkt
     /**
      * Konstruktor für Objekte der Klasse Produkt
      */
-    public Produkt(int zustand, int holzeinheiten, int schrauben, int farbeinheiten, int kartoneinheiten, int produkttionsZeit)
+    public Produkt(int zustand, int holzeinheiten, int schrauben, int farbeinheiten, int kartoneinheiten, int produktionsZeit)
     {
         // Instanzvariable initialisieren
         zustand = 0;
@@ -44,6 +44,14 @@ public class Produkt
      */
     
     //Gebe neuen Zustand ein (neuerZustand) des Typs int. ->Gibt mit void aus (muss nichts ausgeben)
+    //
+    /**
+     * Beispielsweise: 
+     * Zustand 1 = Holzarbeit 
+     * Zustand 2 = Spritzlackierung
+     * Zustand 3 = Montage etc. 
+     * -->spätere Einprogrammierung
+     */
     public void zustandAendern(int neuerZustand)
     {
         // Zustand ändern -->ist hier int. DIes müsste in einem nächsten Schritt noch mit Zuständen zugeordnet werden (allenfalls Begrenzung auf eine gewisse Anazhl Zustände)
@@ -55,5 +63,49 @@ public class Produkt
         //Gibt den aktuellen Zustand wieder (hier wie oben beschrieben als int entsprechend Eingabe)
         return zustand;
     }
+    
+    /**
+     * Get & Set-Methoden: Da in VL kommuniziert, dass wir gleiche Variabeln in Stuhl / Sofa
+     * in der Superklasse implementieren sollen, wandern die Get-Methoden ebenfalls hierher.
+     */
+    
+    public int getHolzeinheiten() {
+        return holzeinheiten;
+    }
+    public void setHolzeinheiten(int HolzFuerProdukt){
+        holzeinheiten = HolzFuerProdukt;
+    }
+    
+    public int getSchrauben() {
+        return schrauben;
+    }
+    public void setSchrauben(int SchraubenFuerProdukt){
+        holzeinheiten = SchraubenFuerProdukt;
+    }
+    
+    public int getFarbEinheiten() {
+        return farbeinheiten;
+    }
+    public void setFarbEinheiten(int FarbeFuerProdukt){
+        holzeinheiten = FarbeFuerProdukt;
+    }
+    
+    public int getKartoneinheiten() {
+        return kartoneinheiten;
+    }
+    public void setKartoneinheiten(int KartonFuerProdukt){
+        holzeinheiten = KartonFuerProdukt;
+    }
+    
+    public int getProduktionsZeit() {
+        return produktionsZeit;
+    }
+    public void setProduktionsZeit(int ProduktionszeitFuerProdukt){
+        holzeinheiten = ProduktionszeitFuerProdukt;
+    }
+    
+
+    
+    
     
 }

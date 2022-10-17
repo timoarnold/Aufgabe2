@@ -30,10 +30,10 @@ public class Stuhl extends Produkt
      *
      */
      
-    public Stuhl()
+    public Stuhl(int zustand, int holzeinheiten, int schrauben, int farbeinheiten, int kartoneinheiten, int produktionsZeit)
     {
         // Instanzvariable initialisieren
-        super(zustand, holzeinheiten, schrauben, farbeinheiten,kartoneinheiten, produktionsZeit);
+        super (zustand, holzeinheiten, schrauben, farbeinheiten,kartoneinheiten, produktionsZeit);
     }
 
     /**
@@ -63,29 +63,10 @@ public class Stuhl extends Produkt
     *
     * Frage: wieso haben wir hier diese Methode? --> "public void setHolzeinheiten..." werden diese Einheiten nicht im Lager aufgegeben (beim Einkauf)?
     *
+    *Anmerkung: Hier unten waren vorher die get & set-Methoden
     */
     
-    public void setHolzeinheiten(int HolzFuerStuhl){
-        holzeinheiten = HolzFuerStuhl;
-    }
     
-    public int getHolzeinheiten() {
-        return holzeinheiten;
-    }
     
-    public int getSchrauben() {
-        return schrauben;
-    }
     
-    public int getFarbEinheiten() {
-        return farbeinheiten;
-    }
-    
-    public int getKartoneinheiten() {
-        return kartoneinheiten;
-    }
-    
-    public int getProduktionsZeit() {
-        return produktionsZeit;
-    }
 }

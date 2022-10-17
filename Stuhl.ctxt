@@ -1,20 +1,7 @@
 #BlueJ class context
 comment0.target=Stuhl
 comment0.text=\r\n\ Feedback\ Cha\r\n\ siehe\ mein\ Kommentar\ in\ Miro\ \u00FCber\ static\ variables\:\ k\u00F6nnte\ die\ Produktionszeit\ eine\ solche\ sein?\ anstatt\ private\ int,\ private\ static\ int?\ warum?\r\n\ weil\ die\ Produktionszeit\ auch\ von\ den\ Sofas\ abh\u00E4ngig\ ist\ oder?\ es\ w\u00FCrde\ es\ flexibler\ machen,\ wenn\ diese\ Variable\ gem\u00E4ss\ Google\ Definition\ nicht\ an\ diese\ "instance"\ gebunden\ ist,\ sondern\ an\ die\ Klasse\ "Produkt"\r\n
-comment1.params=
-comment1.target=Stuhl()
+comment1.params=zustand\ holzeinheiten\ schrauben\ farbeinheiten\ kartoneinheiten\ produktionsZeit
+comment1.target=Stuhl(int,\ int,\ int,\ int,\ int,\ int)
 comment1.text=\r\n\ Feedback\ Cha\r\n\ m\u00FCssen\ wir\ hier\ nicht\ Angeben,\ was\ ein\ Stuhl\ tats\u00E4chlichh\ f\u00FCr\ Einheiten\ braucht?\r\n\r\n
-comment2.params=HolzFuerStuhl
-comment2.target=void\ setHolzeinheiten(int)
-comment2.text=\ \r\n\ Feedback\ Cha\r\n\ In\ Kommentaren\ noch\ kurz\ erkl\u00E4ren,\ was\ bei\ diesen\ Methoden\ passsiert\:\r\n\ Angabe\ Anzahl\ Holzeinheiten\ (etc.)\r\n\r\n\ Input\ Bennenung\ der\ Methoden\:\ wollen\ wir\ diese\ noch\ Stuhl\ und\ Sofa-spezifisch\ machen?\ \r\n\ sonst\ versteht\ ja\ das\ Programm\ und\ wir\ nicht,\ ob\ wir\ getHolzeinheiten\ f\u00FCr\ St\u00FChle\ oder\ Sofas\ wollen...\ Bspw\:\ public\ int\ getholzeinheitenStuhl()\r\n\r\n\ Frage\:\ wieso\ haben\ wir\ hier\ diese\ Methode?\ -->\ "public\ void\ setHolzeinheiten..."\ werden\ diese\ Einheiten\ nicht\ im\ Lager\ aufgegeben\ (beim\ Einkauf)?\r\n\r\n
-comment3.params=
-comment3.target=int\ getHolzeinheiten()
-comment4.params=
-comment4.target=int\ getSchrauben()
-comment5.params=
-comment5.target=int\ getFarbEinheiten()
-comment6.params=
-comment6.target=int\ getKartoneinheiten()
-comment7.params=
-comment7.target=int\ getProduktionsZeit()
-numComments=8
+numComments=2

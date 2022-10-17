@@ -19,10 +19,10 @@ public class Sofa extends Produkt
     /**
      * Konstruktor für Objekte der Klasse Sofa
      */
-    public Sofa()
+    public Sofa(int zustand, int holzeinheiten, int schrauben, int farbeinheiten, int kartoneinheiten, int produktionsZeit)
     {
         // Instanzvariable initialisieren -->nochmals anpassen
-        super(zustand, holzeinheiten, schrauben, farbeinheiten,kartoneinheiten, produktionsZeit); 
+        super(zustand, holzeinheiten, schrauben, farbeinheiten, kartoneinheiten, produktionsZeit); 
         kissen = 0;
        
     }
@@ -41,28 +41,13 @@ public class Sofa extends Produkt
     //}
     //Definition der Get-Methoden, um die oben definierten Variablen abzurufen
     
-    public int getHolzeinheiten() {
-        return holzeinheiten;
-    }
-    
-    public int getSchrauben() {
-        return schrauben;
-    }
     
     public int getKissen() {
         return kissen;
     }
-    
-    public int getFarbEinheiten() {
-        return farbeinheiten;
+    public void setKissen(int KissenFuerSofa){
+        kissen = KissenFuerSofa;
     }
     
-    public int getKartoneinheiten() {
-        return kartoneinheiten;
-    }
-    
-    public int getProduktionsZeit() {
-        return produktionsZeit;
-    }
     
 }
