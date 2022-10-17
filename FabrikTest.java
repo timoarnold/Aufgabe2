@@ -104,7 +104,10 @@ public class FabrikTest
         assertEquals(7, Testfabrik.gibBestellungen().get(0).gibAnzahlSofas());
         
         Bestellung.resetBestellnummerGenerator();
-        
+        /**
+         * BestellnummerGenerator wird nach diesem Test auf 1 zurückgesetzt, damit die Bestellnummern in weiteren Unit-Tests erneut 
+         * von Anfang an hochzählen können. 
+         */
     
     }
 }
