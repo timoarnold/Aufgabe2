@@ -1,9 +1,9 @@
 #BlueJ package file
-dependency1.from=Fabrik
-dependency1.to=Bestellung
+dependency1.from=Bestellung
+dependency1.to=Produkt
 dependency1.type=UsesDependency
-dependency2.from=Bestellung
-dependency2.to=Produkt
+dependency2.from=Fabrik
+dependency2.to=Bestellung
 dependency2.type=UsesDependency
 dependency3.from=FabrikTest
 dependency3.to=Fabrik
@@ -21,8 +21,8 @@ package.divider.horizontal=0.6
 package.divider.vertical=0.8204787234042553
 package.editor.height=403
 package.editor.width=650
-package.editor.x=90
-package.editor.y=186
+package.editor.x=118
+package.editor.y=278
 package.frame.height=600
 package.frame.width=800
 package.numDependencies=4
