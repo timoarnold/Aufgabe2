@@ -111,7 +111,7 @@ public class Fabrik
     
     /**
      * Methode:gibBestellungsNr: 
-     * Gibt die Bestellungsnummer einer aufgegebenen Bestellung aus
+     * Gibt die Totale Anzahl der aufgegebenen Bestellungen aus.
      */
     public int gibBestellungsNr(){
         return bestellungsNr;
