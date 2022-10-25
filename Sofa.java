@@ -1,23 +1,26 @@
 
 /**
-* Feedback Cha: analog zu Stuhl
-*/
-
-
-/**
- * Beschreiben Sie hier die Klasse Sofa.
+ * @author Gruppe 29
+ * @version 1.0 (25. Oktober 2022)
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * Die Klasse Sofa bildet eine Erweiterung / Subklasse der Klasse Produkt. 
+ * Sie erbt somit die Funktionalitäten sowie die globalen Variabeln der Klasse Produkt.
+ * Zudem enthält sie Variabeln, welche für den Produkttyp <Sofa> einzigartig sind.
  */
-//Subklasse von Klasse Produkt. (Übernimmt alle Attribute/Var & Methoden von Oberklasse)
+
 public class Sofa extends Produkt
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
+    /**
+     * Instanzvariabeln:
+     *
+     * kissen           = Anzahl Kissen, welche zur Herstellung eines Produkts benötigt werden (int).
+     */ 
+    
     private int kissen;
 
     /**
      * Konstruktor für Objekte der Klasse Sofa
+     * Dieser initialisiert alle Instanzvariabeln der Klasse Produkt
      */
     public Sofa(int zustand, int holzeinheiten, int schrauben, int kissen, int farbeinheiten, int kartoneinheiten, int produktionsZeit)
     {
@@ -28,16 +31,18 @@ public class Sofa extends Produkt
     }
 
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * Methode getKissen:
+     * Gibt die Anzahl benötigter Kissen für ein Sofa wieder
      */
     
     public int getKissen() {
         return kissen;
     }
     
+    /**
+     * Methode setKissen:
+     * Setzt die Anzahl benötigter Kissen für ein Sofa
+     */
     public void setKissen(int KissenFuerSofa){
         kissen = KissenFuerSofa;
     }

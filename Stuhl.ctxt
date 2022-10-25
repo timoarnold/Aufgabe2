@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Stuhl
-comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Stuhl.\n\ \n\ @author\ (Ihr\ Name)\ \n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
+comment0.text=\r\n\ @author\ Gruppe\ 29\ \r\n\ @version\ 1.0\ (25.\ Oktober\ 2022)\r\n\ \r\n\ Die\ Klasse\ Stuhl\ bildet\ eine\ Erweiterung\ /\ Subklasse\ der\ Klasse\ Produkt.\ \r\n\ Sie\ erbt\ somit\ die\ Funktionalit\u00E4ten\ sowie\ die\ globalen\ Variabeln\ der\ Klasse\ Produkt.\r\n\ Zudem\ enth\u00E4lt\ sie\ Variabeln,\ welche\ f\u00FCr\ den\ Produkttyp\ <Stuhl>\ einzigartig\ sind.\r\n
 comment1.params=zustand\ holzeinheiten\ schrauben\ farbeinheiten\ kartoneinheiten\ produktionsZeit
 comment1.target=Stuhl(int,\ int,\ int,\ int,\ int,\ int)
-comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Stuhl\n\ Hier\ Variabeln\ einf\u00FCgen,\ die\ in\ Produkt\ nicht\ enthalten,\ f\u00FCr\ Stuhl\ jedoch\ notwendig\n
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Stuhl\r\n\ Dieser\ initialisiert\ alle\ Instanzvariabeln\ der\ Klasse\ Produkt\r\n
 numComments=2

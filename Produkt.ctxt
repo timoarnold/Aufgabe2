@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Produkt
-comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Produkt.\n\ \n\ @author\ (Ihr\ Name)\ \n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
+comment0.text=\ \r\n\ @author\ Gruppe\ 29\r\n\ @version\ 1.0\ (25.\ Oktober\ 2022)\r\n\ \r\n\ Die\ Klasse\ Produkt\ bildet\ die\ Superklasse\ der\ beiden\ Produkte\ Stuhl\ &\ Sofa.\r\n\ Sie\ enth\u00E4lt\ globale\ Variabeln\ f\u00FCr\ diese\ beiden\ Produkte\ /\ Variabeln,\ welche\ bei\ Stuhl\ &\ Sofa\ identisch\ sind.\r\n
 comment1.params=zustand\ holzeinheiten\ schrauben\ farbeinheiten\ kartoneinheiten\ produktionsZeit
 comment1.target=Produkt(int,\ int,\ int,\ int,\ int,\ int)
-comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Produkt\n
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Produkt.\r\n\ Dieser\ initialisiert\ alle\ Instanzvariabeln\ der\ Klasse\ Produkt\r\n
 comment10.params=
 comment10.target=int\ getKartoneinheiten()
 comment11.params=KartonFuerProdukt
@@ -14,12 +14,13 @@ comment13.params=ProduktionszeitFuerProdukt
 comment13.target=void\ setProduktionsZeit(int)
 comment2.params=neuerZustand
 comment2.target=void\ zustandAendern(int)
-comment2.text=\n\ W\u00E4hle\ einer\ dieser\ Zust\u00E4nde\:\ \n\ Zustand\ 1\ \=\ Holzarbeit\ \n\ Zustand\ 2\ \=\ Spritzlackierung\n\ Zustand\ 3\ \=\ Montage\n\ Zustand\ 4\ \=\ Verpackung\n
+comment2.text=\r\n\ Methode\ zustandAendern\:\r\n\ Manuelle\ Wahl\ eines\ Produktzustands,\ wobei\:\r\n\ Zustand\ 1\ \=\ Holzarbeit\ \r\n\ Zustand\ 2\ \=\ Spritzlackierung\r\n\ Zustand\ 3\ \=\ Montage\r\n\ Zustand\ 4\ \=\ Verpackung\r\n\ Achtung\:\ Hier\ ist\ zu\ beachten,\ dass\ de\ Zustandsreihenfolge\ bei\ Sofa\ &\ Stuhl\ nicht\ identisch\ ist.\r\n
 comment3.params=
 comment3.target=int\ alktuellerZustand()
+comment3.text=\r\n\ Methode\ aktuellerZustand\:\r\n\ Gibt\ den\ aktuellen\ Zustand\ eines\ Produkts\ wieder.\r\n
 comment4.params=
 comment4.target=int\ getHolzeinheiten()
-comment4.text=\n\ Get\ &\ Set-Methoden\:\ Da\ in\ VL\ kommuniziert,\ dass\ wir\ gleiche\ Variabeln\ in\ Stuhl\ /\ Sofa\n\ in\ der\ Superklasse\ implementieren\ sollen,\ wandern\ die\ Get-Methoden\ ebenfalls\ hierher.\n
+comment4.text=\r\n\ Fortfolgende\:\ Get\ &\ Set-Methoden\:\ \r\n\ Diese\ Methoden\ setzen\ und\ geben\ die\ jeweiligen\ Materialwerte.\ Diese\ k\u00F6nnen\ aus\ den\ Subklassen\ Sofa\ &\ Stuhl\ angesprochen\ werden\r\n\ und\ dienen\ der\ k\u00FCnftigen\ Implementierung\ weiterer\ Programm-Funktionalit\u00E4ten.\r\n
 comment5.params=HolzFuerProdukt
 comment5.target=void\ setHolzeinheiten(int)
 comment6.params=

@@ -7,10 +7,10 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
 /**
- * Die Test-Klasse FabrikTest verwaltet alle Unit-Tests der Software. 
- *
- * @Gruppe 29
+ * @author Gruppe 29
  * @version 1.0 (25. Oktober 2022)
+ * 
+ * Die Test-Klasse FabrikTest verwaltet alle Unit-Tests der Software. 
  */
 public class FabrikTest
 {

@@ -1,30 +1,31 @@
 import java.util.ArrayList;
 import java.io.*;
 /**
- * Beschreiben Sie hier die Klasse Fabrik.
+ * @author Gruppe 29
+ * @version 1.0 (25. Oktober 2022)
  * 
- * @author (Gruppe 29) 
- * @version (Version 2)
- * Test test
+ * Die Klasse Fabrik bildet die Schnittstelle zwischen Kund:innen und Produktion.
+ * Sie nimmt Bestellungen entgegen und verwaltet diese.
  */
 public class Fabrik
 {
     /** 
-     * Instanzen gemäss Musterlösung,
-     * Basierend auf Typ Bestellung machen wir eine Liste namens bestellungen
+     * Instanzvariabeln:
+     * 
+     * bestellungen         = Eine Array-Liste, in der alle eingegangenen Bestellungen als Typ <Bestellung> abgespeichert werden.
+     * bestellungsNr        = Eine Bestellungsnummer, welche jeder Bestellung aufsteigend zugeordnet wird, beginnend bei 1. (int)
      */
    
     private ArrayList<Bestellung> bestellungen; 
     private int bestellungsNr;
 
     /**
-     * Konstruktor für Objekte der Klasse Fabrik
+     * Konstruktor für Objekte der Klasse Fabrik: Hier werden die Instanzvariabeln initialisiert.
      */
     
     public Fabrik()
     {
         /**
-         *Instanzvariable initialisieren
          *bestellungen = Liste aller eingetroffenen Bestellungen vom Typ ArrayList
         */
        
@@ -34,7 +35,7 @@ public class Fabrik
 
     /**
      * Main-Methode
-     * Flo: Hier wäre ich froh um Hilfe
+     * BESCHRIEB JEFF HIER
      */
     
     public static void main(String[] args){
@@ -86,8 +87,10 @@ public class Fabrik
         
     
     /** 
-     * Durch bestellungAufgeben wird eine neue Instanz der Klasse Bestellung erstellt und in der Array "bestellungen" gespeichert.
-     * Zudem wird hier festgelegt, dass die Bestellung nur positive Werte enthalten darf (Keine Minusbestellungen).
+     * Methode bestellungAufgeben:
+     * Durch bestellungAufgeben wird eine neue Instanz der Klasse Bestellung erstellt und in der Array "bestellungen" gespeichert. 
+     * Bei jeder erfolgreiche n Bestellausgabe, wird auf der Konsole eine Message ausgespielt.
+     * In der folgenden Methode wird zudem festgelegt, dass die Bestellung nur positive Werte enthalten darf (Keine Minusbestellungen, sonst Fehlermeldung).
      */
     public void bestellungAufgeben(int sofa, int stuhl){
           if (sofa<0 || stuhl<0 || sofa+stuhl==0){
@@ -106,16 +109,28 @@ public class Fabrik
            
     }
     
+    /**
+     * Methode:gibBestellungsNr: 
+     * Gibt die Bestellungsnummer einer aufgegebenen Bestellung aus
+     */
     public int gibBestellungsNr(){
         return bestellungsNr;
     }
     
+    /**
+     * Methode gibBestellungen: 
+     * Gibt die Bestellungsinformationen aus.
+     * Hier: Gibt die Bestellungsinformationen für den Unit-Test zur Methode BestellungAifgeben wieder.
+     */
     public ArrayList<Bestellung> gibBestellungen(){
         return bestellungen;
     }
    
     /**
-    * Für jede "eineBestellung aus der Liste bestellungen, gibt es de unten programmierte Meldung wieder"
+    * Methode bestellungenAusgeben:
+    * Für jede Bestellung aus der Liste bestellungen, gibt die Konsole die unten programmierte Print-Meldung aus. 
+    * Diese Methode gibt somit alle Informationen (Anzahl Stühle / Anzahl Sofas / Bestellungen Total / Bestellungsnummer) 
+    * für alle aufgegebenen Bestellungen wieder.
     */
     public void bestellungenAusgeben() {
 
@@ -129,7 +144,9 @@ public class Fabrik
     }
     
     /**
-     * Gibt spezifische Bestellung wider
+     * Methode bestellungAusgeben:
+     * Gibt die Informationen einer bestimmten Bestellung wieder. 
+     * Dazu muss diese Methode mit der gewünschten Bestellungsnummer aufgerufen werden.
     */
     public void bestellungAusgeben(int spannendeBestellungNr) {
         

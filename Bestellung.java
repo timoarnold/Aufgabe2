@@ -1,30 +1,30 @@
 import java.util.ArrayList;
 /**
- * Beschreiben Sie hier die Klasse Bestellung.
+ * @author Gruppe 29
+ * @version 1.0 (25. Oktober 2022)
  * 
- * @author (Gruppe 29) 
- * @version (Version 2)
+ * Die Klasse Bestellung verwaltet die Array-Liste, in der alle über die Fabrik bestellten
+ * Produkte gespeichert werden. Dies können Sofas oder Stühle sein.
  */
-//Testkommentar
+
 public class Bestellung
 {
     /** 
-    * InstanzVariablen:
+     * InstanzVariabeln:
     * 
     * Liste bestellteProdukte   = enthält alle Produkte, die bestellt worden sind
     * bestellBestaetigung       = gibt an, ob eine Bestellung erfolgreich bestätigt wurde oder nicht (boolean)
-    * Beschaffungszeit          = gibt an, wie lange die Lieferzeit (in Tage) für die Produkte ist
-    * Anzahl bestellter S       = gibt an, wie viele Stühle und Sofas in einer Bestellung nachgefragt wurden
+    * beschaffungsZeit          = gibt an, wie lange die Lieferzeit (in Tage) für die Produkte ist (int)
+    * bestellNummer             = gibt an, welche Nummer einer Bestellung bei Empfang zugeordnet wurde (int)
+    * anzahlS                   = geben an, wie viele Stühle/Sofas in einer Bestellung nachgefragt wurden (int)
+    * 
+    * 
+     * Klassenvariabeln: 
+    * 
+    * BestellnummerGenerator = Generiert bei der ersten Bestellung die Nummer 1, danach wird bei jeder Bestellung +1 zu dieser Zahl addiert. 
+    * Dies ergibt die Bestellnummer-Variable für jede Bestellung (damit nicht nur die Bestellungsanzahl Total ausgegeben wird)
+    * Hier direkt auf 1 initialisiert, damit Bestellung 1 = 1. Danach bei jeder neuen Bestellung plus 1 (Siehe "++" im Konstruktor).
     */
-   
-   
-    /**
-     * Klassenvariablen: 
-     * 
-     * BestellnummerGenerator = Generiert bei der ersten Bestellung die Nummer 1, danach wird bei jeder Bestellung +1 zu dieser Zahl geadded. 
-     * Dies ergibt die Bestellnummer-Variable für jede Bestellung (damit nicht nur die Bestellungsanzahl Total ausgegeben wird)
-     * Hier direkt auf 1 initialisiert, damit Bestellung 1 = 1 & bei jeder neuen Bestellung plus 1 (Siehe "++" im Konstruktor)
-     */
     
     //Klassenvariablen:
     static private int BestellnummerGenerator=1;
@@ -39,7 +39,7 @@ public class Bestellung
     
     /**
      * Konstruktor der Klasse Bestellung
-     * Dieser initialisiert alle Objekte der Klasse Bestellung
+     * Dieser initialisiert alle Instanzvariabeln der Klasse Bestellung
      */
     public Bestellung(int anzahlStuehle, int anzahlSofas)
     {
@@ -55,7 +55,7 @@ public class Bestellung
     }
 
     /**
-     * Methoden:
+     * Method bestellungBestaetigen: BESCHREIBUNG JEFF HIER EINFÜGEN
      */
     
     public void bestellungBestaetigen()
@@ -71,41 +71,74 @@ public class Bestellung
         bestellBestaetigung = true;
     }
     
+    /**
+     * Methode gibBestellbestaetigung: 
+     * Gibt die Bestellbestätigung aus.
+     */
     public boolean gibBestellBestaetigung()
     {
         return bestellBestaetigung;
     }
     
+    /**
+     * Methode setzBeschaffungsZeit: 
+     * Ermöglicht das manuelle Setzen der jeweiligen Beschaffungszeit in Abstimmung mit den Lieferanten
+     */
     public void setzBeschaffungsZeit(int neueBeschaffungsZeit)
     {
         beschaffungsZeit = neueBeschaffungsZeit; 
     }
     
+    /**
+     * Methode gibBeschaffungszeit:
+     * Gibt die gesetzte Beschaffungszeit aus
+     */
     public int gibBeschaffungszeit()
     {
         return beschaffungsZeit;
     }
     
+    /**
+     * Methode toString:
+     * Wandelt die Konsolenausgabe der Methode bestellungenAUsgeben in die Form String um, 
+     * damit diese im Unit-Test auf Übereinstimmung getestet werden kann.
+     */
     public String toString()
     {
         return "Bestellnummer:" + this.gibBestellNummer()+ "\nStühle bestellt:" + this.gibAnzahlStuehle()+ "\nSofas bestellt:" + this.gibAnzahlSofas();
     }
    
+    /**
+     * Methode gibBestellNummer:
+     * Gibt die jeweilige Nummer einer Bestellung aus
+     */
     public int gibBestellNummer()
     {
         return bestellNummer;
     }
     
+    /**
+     * Methode gibAnzahlStuehle:
+     * Gibt die Anzahl bestellter Stühle in einer Bestellung aus
+     */
     public int gibAnzahlStuehle()
     {
         return anzahlStuehle;
     }
     
+    /**
+     * Methode gibAnzahlSofas:
+     * Gibt die Anzahl bestellter Sofas in einer Bestellung aus
+     */
     public int gibAnzahlSofas()
     {
         return anzahlSofas;
     }
     
+    /**
+     * Methode resetBestellnummerGenerator:
+     * Setzt die Klassenvariabel BestellnummerGenerator auf 0 zurück. Dies dient u. A. zum Unit-Testing.
+     */
     public static void resetBestellnummerGenerator(){
         BestellnummerGenerator = 1;
     }

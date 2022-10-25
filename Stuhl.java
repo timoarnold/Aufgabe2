@@ -1,26 +1,28 @@
 
 /**
- * Beschreiben Sie hier die Klasse Stuhl.
+ * @author Gruppe 29 
+ * @version 1.0 (25. Oktober 2022)
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * Die Klasse Stuhl bildet eine Erweiterung / Subklasse der Klasse Produkt. 
+ * Sie erbt somit die Funktionalitäten sowie die globalen Variabeln der Klasse Produkt.
+ * Zudem enthält sie Variabeln, welche für den Produkttyp <Stuhl> einzigartig sind.
  */
-
-//Subklasse von Klasse Produkt (Übernimmt alle Attribute/Var & Methoden von Oberklasse)
 
 public class Stuhl extends Produkt
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    //MRERKE: Hier sollte als erstes noch der Konstruktor der Klasse Produkt angesprochen werden /Gleiches Gilt für Sofa!!! -->VL 4
+    /**
+     * Instanzvariabeln:
+     * 
+     * (Bisher noch keine)
+     */
     
 
     /**
      * Konstruktor für Objekte der Klasse Stuhl
-     * Hier Variabeln einfügen, die in Produkt nicht enthalten, für Stuhl jedoch notwendig
+     * Dieser initialisiert alle Instanzvariabeln der Klasse Produkt
      */
     public Stuhl(int zustand, int holzeinheiten, int schrauben, int farbeinheiten, int kartoneinheiten, int produktionsZeit)
     {
-        // Instanzvariable initialisieren
         super (zustand, holzeinheiten, schrauben, farbeinheiten,kartoneinheiten, produktionsZeit);
     }
 }
