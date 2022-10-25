@@ -19,11 +19,11 @@ public class Sofa extends Produkt
     /**
      * Konstruktor für Objekte der Klasse Sofa
      */
-    public Sofa(int zustand, int holzeinheiten, int schrauben, int farbeinheiten, int kartoneinheiten, int produktionsZeit)
+    public Sofa(int zustand, int holzeinheiten, int schrauben, int kissen, int farbeinheiten, int kartoneinheiten, int produktionsZeit)
     {
         // Instanzvariable initialisieren -->nochmals anpassen
         super(zustand, holzeinheiten, schrauben, farbeinheiten, kartoneinheiten, produktionsZeit); 
-        kissen = 0;
+        this.kissen = kissen;
        
     }
 
@@ -33,18 +33,11 @@ public class Sofa extends Produkt
      * @param  y    ein Beispielparameter für eine Methode
      * @return        die Summe aus x und y
      */
-    //Hier käme:
-    //public int beispielMethode()
-    //{
-        // tragen Sie hier den Code ein
-        
-    //}
-    //Definition der Get-Methoden, um die oben definierten Variablen abzurufen
-    
     
     public int getKissen() {
         return kissen;
     }
+    
     public void setKissen(int KissenFuerSofa){
         kissen = KissenFuerSofa;
     }

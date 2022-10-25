@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Produkt
-comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Produkt.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Produkt.\n\ \n\ @author\ (Ihr\ Name)\ \n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
 comment1.params=zustand\ holzeinheiten\ schrauben\ farbeinheiten\ kartoneinheiten\ produktionsZeit
 comment1.target=Produkt(int,\ int,\ int,\ int,\ int,\ int)
-comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Produkt\r\n
+comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Produkt\n
 comment10.params=
 comment10.target=int\ getKartoneinheiten()
 comment11.params=KartonFuerProdukt
@@ -14,12 +14,12 @@ comment13.params=ProduktionszeitFuerProdukt
 comment13.target=void\ setProduktionsZeit(int)
 comment2.params=neuerZustand
 comment2.target=void\ zustandAendern(int)
-comment2.text=\r\n\ Beispielsweise\:\ \r\n\ Zustand\ 1\ \=\ Holzarbeit\ \r\n\ Zustand\ 2\ \=\ Spritzlackierung\r\n\ Zustand\ 3\ \=\ Montage\ etc.\ \r\n\ -->sp\u00E4tere\ Einprogrammierung\r\n
+comment2.text=\n\ W\u00E4hle\ einer\ dieser\ Zust\u00E4nde\:\ \n\ Zustand\ 1\ \=\ Holzarbeit\ \n\ Zustand\ 2\ \=\ Spritzlackierung\n\ Zustand\ 3\ \=\ Montage\n\ Zustand\ 4\ \=\ Verpackung\n
 comment3.params=
 comment3.target=int\ alktuellerZustand()
 comment4.params=
 comment4.target=int\ getHolzeinheiten()
-comment4.text=\r\n\ Get\ &\ Set-Methoden\:\ Da\ in\ VL\ kommuniziert,\ dass\ wir\ gleiche\ Variabeln\ in\ Stuhl\ /\ Sofa\r\n\ in\ der\ Superklasse\ implementieren\ sollen,\ wandern\ die\ Get-Methoden\ ebenfalls\ hierher.\r\n
+comment4.text=\n\ Get\ &\ Set-Methoden\:\ Da\ in\ VL\ kommuniziert,\ dass\ wir\ gleiche\ Variabeln\ in\ Stuhl\ /\ Sofa\n\ in\ der\ Superklasse\ implementieren\ sollen,\ wandern\ die\ Get-Methoden\ ebenfalls\ hierher.\n
 comment5.params=HolzFuerProdukt
 comment5.target=void\ setHolzeinheiten(int)
 comment6.params=

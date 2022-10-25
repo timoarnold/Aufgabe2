@@ -5,13 +5,8 @@
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-//Subklasse von Klasse Produkt (Übernimmt alle Attribute/Var & Methoden von Oberklasse)
 
-/**
-* Feedback Cha
-* siehe mein Kommentar in Miro über static variables: könnte die Produktionszeit eine solche sein? anstatt private int, private static int? warum?
-* weil die Produktionszeit auch von den Sofas abhängig ist oder? es würde es flexibler machen, wenn diese Variable gemäss Google Definition nicht an diese "instance" gebunden ist, sondern an die Klasse "Produkt"
-*/
+//Subklasse von Klasse Produkt (Übernimmt alle Attribute/Var & Methoden von Oberklasse)
 
 public class Stuhl extends Produkt
 {
@@ -23,50 +18,9 @@ public class Stuhl extends Produkt
      * Konstruktor für Objekte der Klasse Stuhl
      * Hier Variabeln einfügen, die in Produkt nicht enthalten, für Stuhl jedoch notwendig
      */
-     
-     /**
-     * Feedback Cha
-     * müssen wir hier nicht Angeben, was ein Stuhl tatsächlichh für Einheiten braucht?
-     *
-     */
-     
     public Stuhl(int zustand, int holzeinheiten, int schrauben, int farbeinheiten, int kartoneinheiten, int produktionsZeit)
     {
         // Instanzvariable initialisieren
         super (zustand, holzeinheiten, schrauben, farbeinheiten,kartoneinheiten, produktionsZeit);
     }
-
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    //Hier käme:
-    //public int beispielMethode()
-    //{
-        // tragen Sie hier den Code ein
-        
-    //}
-    //Methoden für Abruf der Informationen analog zu Sofa
-    //
-    
-    //Exemplar einer set-Funktion (falls später benötigt) -->käme jeweils vor get-Funktion.
-    
-    /** 
-    * Feedback Cha
-    * In Kommentaren noch kurz erklären, was bei diesen Methoden passsiert:
-    * Angabe Anzahl Holzeinheiten (etc.)
-    *
-    * Input Bennenung der Methoden: wollen wir diese noch Stuhl und Sofa-spezifisch machen? 
-    * sonst versteht ja das Programm und wir nicht, ob wir getHolzeinheiten für Stühle oder Sofas wollen... Bspw: public int getholzeinheitenStuhl()
-    *
-    * Frage: wieso haben wir hier diese Methode? --> "public void setHolzeinheiten..." werden diese Einheiten nicht im Lager aufgegeben (beim Einkauf)?
-    *
-    *Anmerkung: Hier unten waren vorher die get & set-Methoden
-    */
-    
-    
-    
-    
 }

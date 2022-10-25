@@ -1,22 +1,23 @@
 #BlueJ class context
 comment0.target=Fabrik
-comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Fabrik.\r\n\ \r\n\ @author\ (Gruppe\ 29)\ \r\n\ @version\ (Version\ 2)\r\n\ Test\r\n
+comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Fabrik.\n\ \n\ @author\ (Gruppe\ 29)\ \n\ @version\ (Version\ 2)\n\ Test\n
 comment1.params=
 comment1.target=Fabrik()
-comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Fabrik\r\n
+comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Fabrik\n
 comment2.params=args
 comment2.target=void\ main(java.lang.String[])
-comment2.text=\r\n\ Main-Methode\r\n\ Flo\:\ Hier\ w\u00E4re\ ich\ froh\ um\ Hilfe\r\n
+comment2.text=\n\ Main-Methode\n\ Flo\:\ Hier\ w\u00E4re\ ich\ froh\ um\ Hilfe\n
 comment3.params=sofa\ stuhl
 comment3.target=void\ bestellungAufgeben(int,\ int)
-comment3.text=\ \r\n\ Wenn\ man\ nun\ eine\ Bestellung\ aufgibt,\ kann\ man\ hier\ schon\ angeben,\ ob\ es\ St\u00FChle\ oder\ Sofas\ sein\ sollen?\ -->Ja,\ wird\ im\ UI\ angezeigt\ \:)\r\n\ sagt\ die\ Funktion\ "bestellungen.add(new\ Bestellung());"\ dem\ System\ das?\ Oder\ muss\ man\ evtl.\ mit\ einer\ weiteren\ Funktion\ vorher\ angeben,\ was\ bestellt\ wird?\ \r\n\ vielleicht\ so\:\ \r\n\ bestellungsNr\ \=\ bestellungsNr+1;\r\n\ Bestellung\ eineBestellung\ \=\ new\ Bestellung(bestellungsNr,\ sofa,\ chairs);\r\n\ bestellungen.add(new\ Bestellung);\r\n\ \r\n\ Flo\:\ Durch\ bestellungAufgeben\ wird\ eine\ neue\ Instanz\ der\ Klasse\ Bestellung\ erstellt\ und\ in\ der\ Array\ "bestellungen"\ gespeichert.\r\n\ Zudem\ wird\ hier\ festgelegt,\ dass\ die\ Bestellung\ nur\ positive\ Werte\ enthalten\ darf\ (Keine\ Minusbestellungen).\r\n
+comment3.text=\ \n\ Durch\ bestellungAufgeben\ wird\ eine\ neue\ Instanz\ der\ Klasse\ Bestellung\ erstellt\ und\ in\ der\ Array\ "bestellungen"\ gespeichert.\n\ Zudem\ wird\ hier\ festgelegt,\ dass\ die\ Bestellung\ nur\ positive\ Werte\ enthalten\ darf\ (Keine\ Minusbestellungen).\n
 comment4.params=
 comment4.target=int\ gibBestellungsNr()
 comment5.params=
 comment5.target=java.util.ArrayList\ gibBestellungen()
 comment6.params=
 comment6.target=void\ bestellungenAusgeben()
-comment6.text=\r\n\ Feedback\ Cha\r\n\ Hier\ muss\ meiner\ Meinung\ rein,\ was\ geprintet\ werden\ soll.\ Untenstehend\ mein\ Input\:\r\n\ System.out.println("Bestellnummer\:\ "\ +\ bestellung.gibBestellungsNr());\r\n\ System.out.println("Anzahl\ St\u00FChle\:\ "\ +\ bestellung.gibAnzahlStuehle());\ -->\ hier\ schauen,\ dass\ Stuehle\ konsistent\ geschrieben\ ist\r\n\ System.out.println("Anzahl\ Sofas\:\ "\ +\ bestellung.gibAnzahlSofas());\ -->\ hier\ schauen,\ dass\ Sofas\ konsistent\ geschrieben\ ist\r\n\ System.out.println("Beschaffungszeit\:\ "\ +\ bestellung.gibBeschaffungsZeit());\r\n\ System.out.println("Bestellbest\u00E4tigung\:\ "\ +\ bestellung.gibBestellBestaetigung());\r\n\ System.out.println();\r\n\ \r\n\ Flo\:\ Erg\u00E4nzt\ &\ unterste\ 2\ get-Funktionen\ in\ Dummy-FUnktionen\ innerhalb\ Kommentare,\ \r\n\ da\ noch\ keine\ entsprechende\ Variable\ in\ Klasse\ Bestellung\ implementiert\r\n
+comment6.text=\n\ F\u00FCr\ jede\ "eineBestellung\ aus\ der\ Liste\ bestellungen,\ gibt\ es\ de\ unten\ programmierte\ Meldung\ wieder"\n
 comment7.params=spannendeBestellungNr
 comment7.target=void\ bestellungAusgeben(int)
+comment7.text=\n\ Gibt\ spezifische\ Bestellung\ wider\n
 numComments=8
