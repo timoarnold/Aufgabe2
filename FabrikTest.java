@@ -7,19 +7,17 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
 /**
- * Die Test-Klasse FabrikTest.
+ * Die Test-Klasse FabrikTest verwaltet alle Unit-Tests der Software. 
  *
- * @author  (Ihr Name)
- * @version (eine Versionsnummer oder ein Datum)
+ * @Gruppe 29
+ * @version 1.0 (25. Oktober 2022)
  */
 public class FabrikTest
 {
     private Fabrik fabrik; 
 
     /**
-     *  Setzt das Testgerüst fuer den Test.
-     *
-     * Wird vor jeder Testfall-Methode aufgerufen.
+     * Vor jedem Unit-Test der Klasse Fabrik und deren Inhalten, wird eine neue Fabrikinstanz erstellt..
      */
     @BeforeEach
     public void setUp()
@@ -28,9 +26,8 @@ public class FabrikTest
     }
 
     /**
-     * Gibt das Testgerüst wieder frei. -->Brauchen wir sicher nicht
-     *
-     * Wird nach jeder Testfall-Methode aufgerufen.
+     * Anweisungen, welche nach jedem Unit-Test ausgeführt werden. 
+     * In diesem Fall: (Noch) keine.
      */
     @AfterEach
     public void tearDown()
@@ -40,26 +37,30 @@ public class FabrikTest
     
     @Test
     public void TestBestellungsNummer(){
-        //Act
+        //Arrange: Siehe BeforeEach
+        
+        //Act: Zwei Testbestellungen werden aufgegeben
         fabrik.bestellungAufgeben(2,3);
         fabrik.bestellungAufgeben(1,1);
 
-        //Assert
+        //Assert: Check, ob Ergebnis == erwartetes Ergebnis
         assertEquals(2, fabrik.gibBestellungsNr());
         
         /**
-         * Getestet, ob richtige Bestellnummer, wenn Instanz Fabrik 
-         * erzeugt und 2 Testbestellungen aufgegeben.
+         * Getestet, ob die richtige Bestellnummer ausgegeben wird, wenn Instanz Fabrik 
+         * erzeugt und 2 Testbestellungen aufgegeben werden.
          */
     }
     
     @Test
     public void TestBestellungAusgeben(){
-        //Act
+        //Arrange: Siehe BeforeEach
+        
+        //Act: Zwei Testbestellungen werden aufgegeben
         fabrik.bestellungAufgeben(2,3);
         fabrik.bestellungAufgeben(6,6);
         
-        //Assert
+        //Assert: Check, ob Ausgabe der Bestellung == erwartete / korrekte Ausgabe
         assertEquals("Bestellnummer:"+1+"\nStühle bestellt:"+2+"\nSofas bestellt:"+3,fabrik.gibBestellungen().get(0).toString());
         assertEquals("Bestellnummer:"+2+"\nStühle bestellt:"+6+"\nSofas bestellt:"+6,fabrik.gibBestellungen().get(1).toString());
         /**
@@ -71,17 +72,20 @@ public class FabrikTest
     
     @Test
     public void TestBestellungAufgeben(){
-        //Act
+        //Arrange: Siehe BeforeEach
+        
+        //Act: Testbestellung wird aufgegeben
         fabrik.bestellungAufgeben(4,7);
         
         
-        //Assert
+        //Assert: Check, ob die richtige Anzahl Stühle und Sofas ausgegeben wird
         assertEquals(4, fabrik.gibBestellungen().get(0).gibAnzahlStuehle());
         assertEquals(7, fabrik.gibBestellungen().get(0).gibAnzahlSofas());
         
         Bestellung.resetBestellnummerGenerator();
+        
         /**
-         * BestellnummerGenerator wird nach diesem Test auf 1 zurückgesetzt, damit die Bestellnummern in weiteren Unit-Tests erneut 
+         * Merke:BestellnummerGenerator wird nach diesem Test auf 1 zurückgesetzt, damit die Bestellnummern in weiteren Unit-Tests erneut 
          * von Anfang an hochzählen können. 
          */
     

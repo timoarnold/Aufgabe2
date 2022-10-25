@@ -5,7 +5,7 @@ import java.io.*;
  * 
  * @author (Gruppe 29) 
  * @version (Version 2)
- * Test
+ * Test test
  */
 public class Fabrik
 {
