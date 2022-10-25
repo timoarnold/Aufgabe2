@@ -12,7 +12,7 @@ public class Fabrik
     /** 
      * Instanzen gemäss Musterlösung,
      * Basierend auf Typ Bestellung machen wir eine Liste namens bestellungen
-    */
+     */
    
     private ArrayList<Bestellung> bestellungen; 
     private int bestellungsNr;
@@ -36,52 +36,71 @@ public class Fabrik
      * Main-Methode
      * Flo: Hier wäre ich froh um Hilfe
      */
-    //
     
     public static void main(String[] args){
         
         System.out.println("Ausgabe aus der main()-Methode:");
-        Fabrik x= new Fabrik();
-               
-    }
-        //ev While / for-Schleife: Solang nicht XY passiert, geht die Main-Methode alles durch und gibt XY aus..
-    
-
-    
+        Fabrik fabrik= new Fabrik();
+        
+        boolean weiterBestellen = true;
+        boolean invaliderInput = false;
+        
+        BufferedReader infile = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Willkommen bei AEKI");
+        
+        while(weiterBestellen){
+            int anzahlSofas;
+            int anzahlStühle;
+            String weiterBestellenString;
+            
+            try{
+                if(!invaliderInput){
+                    System.out.println("Geben Sie die Anzahl Sofas an, welche Sie bestellen möchten: ");
+                    anzahlSofas = Integer.parseInt(infile.readLine().trim());
+                    System.out.println("Geben Sie die Anzahl Stühle an, welche Sie bestellen möchten: ");
+                    anzahlStühle = Integer.parseInt(infile.readLine().trim());
+                    fabrik.bestellungAufgeben(anzahlSofas, anzahlStühle);
+                    }
+                System.out.print("Möchten Sie weiter bestellen? (ja/nein)");
+                weiterBestellenString = infile.readLine();
+                if(weiterBestellenString.equals("ja")){
+                    weiterBestellen = true;
+                    invaliderInput = false;
+                    } 
+                else if(weiterBestellenString.equals("nein")){
+                    weiterBestellen = false;
+                    invaliderInput = false;
+                    }
+                else{
+                    System.out.println("Invalider Input, geben sie ja oder nein ein.");
+                    invaliderInput = true;
+                    }
+                } 
+            catch (Exception E){
+                System.out.println("Invalider Input, geben sie eine Zahl ein.");
+                }
+            
+            }
+        fabrik.bestellungenAusgeben();
+        }
+        
     
     /** 
-    * Wenn man nun eine Bestellung aufgibt, kann man hier schon angeben, ob es Stühle oder Sofas sein sollen? -->Ja, wird im UI angezeigt :)
-    * sagt die Funktion "bestellungen.add(new Bestellung());" dem System das? Oder muss man evtl. mit einer weiteren Funktion vorher angeben, was bestellt wird? 
-    * vielleicht so: 
-    * bestellungsNr = bestellungsNr+1;
-    * Bestellung eineBestellung = new Bestellung(bestellungsNr, sofa, chairs);
-    * bestellungen.add(new Bestellung);
-    * 
-    * Flo: Durch bestellungAufgeben wird eine neue Instanz der Klasse Bestellung erstellt und in der Array "bestellungen" gespeichert.
-    * Zudem wird hier festgelegt, dass die Bestellung nur positive Werte enthalten darf (Keine Minusbestellungen).
-    */
+     * Durch bestellungAufgeben wird eine neue Instanz der Klasse Bestellung erstellt und in der Array "bestellungen" gespeichert.
+     * Zudem wird hier festgelegt, dass die Bestellung nur positive Werte enthalten darf (Keine Minusbestellungen).
+     */
     public void bestellungAufgeben(int sofa, int stuhl){
-    
-           /**
-            * Check, ob Bestellungseingabe gültig oder nicht -->Merke: "||" bedeutet hier logisches "oder".
-            * Merke auch "=" ist eine Zuweisung / "==" ein Vergleich
-            */
-          
           if (sofa<0 || stuhl<0 || sofa+stuhl==0){
                System.out.println("Bitte geben sie eine positiven Bestellbetrag ein");
            }
            else {
-               
-               /**Bestellung aufgeben -->referenziert Klasse Bestellung und callt Konstruktorfunktion von Bestellung
-                * Bestellung der Liste "bestellungen" hinzufügen
-                */
+
+               Bestellung bestellung = new Bestellung(sofa, stuhl);
+               bestellungsNr++;
+               bestellung.bestellungBestaetigen();
               
-               bestellungen.add(new Bestellung(sofa,stuhl));
+               bestellungen.add(bestellung);
            
-               //Bestellungsnummer erhöhen
-               bestellungsNr= bestellungsNr+1;     
-           
-               //Print zur Übersicht
                System.out.println("Bestellung erfolgreich aufgegeben");
            }
            
@@ -94,27 +113,12 @@ public class Fabrik
     public ArrayList<Bestellung> gibBestellungen(){
         return bestellungen;
     }
-    
-    /**
-    * Feedback Cha
-    * Hier muss meiner Meinung rein, was geprintet werden soll. Untenstehend mein Input:
-    * System.out.println("Bestellnummer: " + bestellung.gibBestellungsNr());
-    * System.out.println("Anzahl Stühle: " + bestellung.gibAnzahlStuehle()); --> hier schauen, dass Stuehle konsistent geschrieben ist
-    * System.out.println("Anzahl Sofas: " + bestellung.gibAnzahlSofas()); --> hier schauen, dass Sofas konsistent geschrieben ist
-    * System.out.println("Beschaffungszeit: " + bestellung.gibBeschaffungsZeit());
-    * System.out.println("Bestellbestätigung: " + bestellung.gibBestellBestaetigung());
-    * System.out.println();
-    * 
-    * Flo: Ergänzt & unterste 2 get-Funktionen in Dummy-FUnktionen innerhalb Kommentare, 
-    * da noch keine entsprechende Variable in Klasse Bestellung implementiert
-    */
    
+    /**
+    * Für jede "eineBestellung aus der Liste bestellungen, gibt es de unten programmierte Meldung wieder"
+    */
     public void bestellungenAusgeben() {
-        //
-        /**Für jede "eineBestellung aus der Liste bestellungen, gibt es de unten programmierte Meldung wieder"
-         */
-         //for(Klasse_BeschreibenderNamefür diese lokale Variable: in Liste bestellungen
-        //Jedes El. der Liste "bestellungen" wird unter eineBestellung gespeichert und anschliessend geprintet
+
         System.out.println("Total Bestellungen bisher:"+bestellungsNr);
         
         for(Bestellung eineBestellung: bestellungen) {
@@ -122,19 +126,13 @@ public class Fabrik
             System.out.println(eineBestellung);
             
         }
-            
-            /** Aternativ auch noch: 
-             * System.out.println("Beschaffungszeit:" + eineBestellung.gibxxxxxx()); -->Sobald eine entsprechende Variable erstellt in Bestellungen
-             * System.out.println("Bestellbestätigung:" + eineBestellung.gibxxxxx());-->Sobald eine entsprechende Variable erstellt in Bestellungen
-             */
-    
     }
     
+    /**
+     * Gibt spezifische Bestellung wider
+    */
     public void bestellungAusgeben(int spannendeBestellungNr) {
-        //
-        /**
-         * Gibt spezifische Bestellung wider
-         */
+        
         
         System.out.println("Details der Bestellung mit der Nummer:" + spannendeBestellungNr);
         

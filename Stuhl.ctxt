@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Stuhl
-comment0.text=\r\n\ Feedback\ Cha\r\n\ siehe\ mein\ Kommentar\ in\ Miro\ \u00FCber\ static\ variables\:\ k\u00F6nnte\ die\ Produktionszeit\ eine\ solche\ sein?\ anstatt\ private\ int,\ private\ static\ int?\ warum?\r\n\ weil\ die\ Produktionszeit\ auch\ von\ den\ Sofas\ abh\u00E4ngig\ ist\ oder?\ es\ w\u00FCrde\ es\ flexibler\ machen,\ wenn\ diese\ Variable\ gem\u00E4ss\ Google\ Definition\ nicht\ an\ diese\ "instance"\ gebunden\ ist,\ sondern\ an\ die\ Klasse\ "Produkt"\r\n
+comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Stuhl.\n\ \n\ @author\ (Ihr\ Name)\ \n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
 comment1.params=zustand\ holzeinheiten\ schrauben\ farbeinheiten\ kartoneinheiten\ produktionsZeit
 comment1.target=Stuhl(int,\ int,\ int,\ int,\ int,\ int)
-comment1.text=\r\n\ Feedback\ Cha\r\n\ m\u00FCssen\ wir\ hier\ nicht\ Angeben,\ was\ ein\ Stuhl\ tats\u00E4chlichh\ f\u00FCr\ Einheiten\ braucht?\r\n\r\n
+comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Stuhl\n\ Hier\ Variabeln\ einf\u00FCgen,\ die\ in\ Produkt\ nicht\ enthalten,\ f\u00FCr\ Stuhl\ jedoch\ notwendig\n
 numComments=2
