@@ -13,39 +13,81 @@ public class Sofa extends Produkt
     /**
      * Instanzvariabeln:
      *
-     * kissen           = Anzahl Kissen, welche zur Herstellung eines Produkts benötigt werden (int).
+     * holzeinheiten        = Anzahl Holzeiheiten, welche zur Herstellung eines Sofas benötigt werden (int).
+     * schrauben            = Anzahl Schrauben, welche zur Herstellung eines Sofas benötigt werden (int).
+     * kissen               = Anzahl Kissen, welche zur Herstellung eines Sofas benötigt werden (int).
+     * farbeinheiten        = Anzahl Farbeinheiten, welche zur Herstellung eines Sofas benötigt werden (int).
+     * kartoneinheiten      = Anzahl Kartoneinheiten, welche zur Herstellung eines Sofas benötigt werden (int).
+     * produktionsZeit      = Produktionszeit in Stunden (int), die zur Produktion eines Sofas nötig ist.
      */ 
     
-    private int kissen;
+    static private int holzeinheiten;
+    static private int schrauben;
+    static private int kissen;
+    static private int farbeinheiten;
+    static private int kartoneinheiten;
+    static private int produktionsZeit;
 
     /**
      * Konstruktor für Objekte der Klasse Sofa
      * Dieser initialisiert alle Instanzvariabeln der Klasse Produkt
      */
-    public Sofa(int zustand, int holzeinheiten, int schrauben, int kissen, int farbeinheiten, int kartoneinheiten, int produktionsZeit)
+    public Sofa(int zustand)
     {
-        // Instanzvariable initialisieren -->nochmals anpassen
-        super(zustand, holzeinheiten, schrauben, farbeinheiten, kartoneinheiten, produktionsZeit); 
-        this.kissen = kissen;
-       
+        super(zustand); 
+        holzeinheiten = 4;
+        schrauben = 5;
+        kissen = 5;
+        farbeinheiten = 1;
+        kartoneinheiten = 5;
+        produktionsZeit = 60;
     }
 
     /**
-     * Methode getKissen:
-     * Gibt die Anzahl benötigter Kissen für ein Sofa wieder
+     * Methode getHolzeinheiten():
+     * Gibt die Anzahl benötigter Holzeinheiten für die Produktion eines Sofa zurück.
      */
+    public int getHolzeinheiten() {
+        return holzeinheiten;
+    }
     
+    /**
+     * Methode getSchrauben():
+     * Gibt die Anzahl benötigter Schrauben für die Produktion eines Sofa zurück.
+     */
+    public int getSchrauben() {
+        return schrauben;
+    }
+    
+    /**
+     * Methode getKissen():
+     * Gibt die Anzahl benötigter Kissen für die Produktion eines Sofa zurück.
+     */
     public int getKissen() {
         return kissen;
     }
     
     /**
-     * Methode setKissen:
-     * Setzt die Anzahl benötigter Kissen für ein Sofa
+     * Methode getFarbEinheiten():
+     * Gibt die Anzahl benötigter Farbeinheiten für die Produktion eines Sofa zurück.
      */
-    public void setKissen(int KissenFuerSofa){
-        kissen = KissenFuerSofa;
+    public int getFarbEinheiten() {
+        return farbeinheiten;
     }
     
+    /**
+     * Methode getKartoneinheiten():
+     * Gibt die Anzahl benötigter Kartoneinheiten für die Produktion eines Sofa zurück.
+     */
+    public int getKartoneinheiten() {
+        return kartoneinheiten;
+    }
     
+    /**
+     * Methode getProduktionsZeit():
+     * Gibt die Produktionszeit für ein Sofa zurück.
+     */
+    public int getProduktionsZeit() {
+        return produktionsZeit;
+    }
 }

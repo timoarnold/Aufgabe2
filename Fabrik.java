@@ -25,17 +25,16 @@ public class Fabrik
     
     public Fabrik()
     {
-        /**
-         *bestellungen = Liste aller eingetroffenen Bestellungen vom Typ ArrayList
-        */
-       
         bestellungen = new ArrayList<Bestellung>();
         bestellungsNr = 0;
     }
 
     /**
      * Main-Methode
-     * BESCHRIEB JEFF HIER
+     * Durch die Main-Methode wird ein Dioalogsystem aufgerufen, in welcher der User Bestellungen für Sofas und Stühle aufgeben kann (Durchführung der Methode bestellungAufgeben).
+     * Der User kann nach einer Bestellung entscheiden, ob er weiter bestellen möchte.
+     * Sobald sich der User entscheidet, nicht mehr weiterzubestellen, wird eine Zusammenfassung der Bestellungen ausgegeben (Durchführung der Methode bestellungsAusgeben).
+     * Ausserdem die Inputs des Users überprüft, sodass die geforderten Informationen angegeben werden.
      */
     
     public static void main(String[] args){
@@ -73,12 +72,12 @@ public class Fabrik
                     invaliderInput = false;
                     }
                 else{
-                    System.out.println("Invalider Input, geben sie ja oder nein ein.");
+                    System.out.println("Invalider Input. Bitte geben Sie ja oder nein ein.");
                     invaliderInput = true;
                     }
                 } 
             catch (Exception E){
-                System.out.println("Invalider Input, geben sie eine Zahl ein.");
+                System.out.println("Invalider Input. Bitte geben Sie eine Zahl ein.");
                 }
             
             }
@@ -88,8 +87,8 @@ public class Fabrik
     
     /** 
      * Methode bestellungAufgeben:
-     * Durch bestellungAufgeben wird eine neue Instanz der Klasse Bestellung erstellt und in der Array "bestellungen" gespeichert. 
-     * Bei jeder erfolgreiche n Bestellausgabe, wird auf der Konsole eine Message ausgespielt.
+     * Durch bestellungAufgeben wird eine neue Instanz der Klasse Bestellung erstellt, die Bestellung bestätigt und in der Array "bestellungen" gespeichert. 
+     * Bei jeder erfolgreichen Bestellausgabe, wird auf der Konsole eine Message ausgespielt.
      * In der folgenden Methode wird zudem festgelegt, dass die Bestellung nur positive Werte enthalten darf (Keine Minusbestellungen, sonst Fehlermeldung).
      */
     public void bestellungAufgeben(int sofa, int stuhl){
@@ -97,11 +96,10 @@ public class Fabrik
                System.out.println("Bitte geben sie eine positiven Bestellbetrag ein");
            }
            else {
-
-               Bestellung bestellung = new Bestellung(sofa, stuhl);
                bestellungsNr++;
+               
+               Bestellung bestellung = new Bestellung(sofa, stuhl);
                bestellung.bestellungBestaetigen();
-              
                bestellungen.add(bestellung);
            
                System.out.println("Bestellung erfolgreich aufgegeben");
@@ -110,7 +108,7 @@ public class Fabrik
     }
     
     /**
-     * Methode:gibBestellungsNr: 
+     * Methode gibBestellungsNr: 
      * Gibt die Totale Anzahl der aufgegebenen Bestellungen aus.
      */
     public int gibBestellungsNr(){
@@ -127,11 +125,11 @@ public class Fabrik
     }
    
     /**
-    * Methode bestellungenAusgeben:
-    * Für jede Bestellung aus der Liste bestellungen, gibt die Konsole die unten programmierte Print-Meldung aus. 
-    * Diese Methode gibt somit alle Informationen (Anzahl Stühle / Anzahl Sofas / Bestellungen Total / Bestellungsnummer) 
-    * für alle aufgegebenen Bestellungen wieder.
-    */
+     * Methode bestellungenAusgeben:
+     * Für jede Bestellung aus der Liste bestellungen, gibt die Konsole die unten programmierte Print-Meldung aus. 
+     * Diese Methode gibt somit alle Informationen (Anzahl Stühle / Anzahl Sofas / Bestellungen Total / Bestellungsnummer) 
+     * für alle aufgegebenen Bestellungen wieder.
+     */
     public void bestellungenAusgeben() {
 
         System.out.println("Total Bestellungen bisher:"+bestellungsNr);
@@ -147,7 +145,7 @@ public class Fabrik
      * Methode bestellungAusgeben:
      * Gibt die Informationen einer bestimmten Bestellung wieder. 
      * Dazu muss diese Methode mit der gewünschten Bestellungsnummer aufgerufen werden.
-    */
+     */
     public void bestellungAusgeben(int spannendeBestellungNr) {
         
         
