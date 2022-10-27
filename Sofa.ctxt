@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Sofa
 comment0.text=\n\ @author\ Gruppe\ 29\n\ @version\ 1.0\ (25.\ Oktober\ 2022)\n\ \n\ Die\ Klasse\ Sofa\ bildet\ eine\ Erweiterung\ /\ Subklasse\ der\ Klasse\ Produkt.\ \n\ Sie\ erbt\ somit\ die\ Funktionalit\u00E4ten\ sowie\ die\ globalen\ Variabeln\ der\ Klasse\ Produkt.\n\ Zudem\ enth\u00E4lt\ sie\ Variabeln,\ welche\ f\u00FCr\ den\ Produkttyp\ <Sofa>\ einzigartig\ sind.\n
-comment1.params=zustand
-comment1.target=Sofa(int)
+comment1.params=
+comment1.target=Sofa()
 comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Sofa\n\ Dieser\ initialisiert\ alle\ Instanzvariabeln\ der\ Klasse\ Produkt\n
 comment2.params=
 comment2.target=int\ getHolzeinheiten()

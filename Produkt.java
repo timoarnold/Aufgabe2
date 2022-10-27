@@ -6,8 +6,8 @@
  * Die Klasse Produkt bildet die Superklasse der beiden Produkte Stuhl & Sofa.
  * Sie enthält globale Variabeln für diese beiden Produkte / Variabeln, welche bei Stuhl & Sofa identisch sind.
  */
-public class Produkt
-{
+
+public class Produkt {
     /**
      * Instanzvariabeln:
      * 
@@ -23,8 +23,7 @@ public class Produkt
      */
     public Produkt(int zustand)
     {
-        // Instanzvariable initialisieren
-        zustand = 1;
+        this.zustand = zustand;
     }
 
     /**

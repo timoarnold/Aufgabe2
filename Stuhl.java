@@ -8,8 +8,7 @@
  * Zudem enthält sie Variabeln, welche für den Produkttyp <Stuhl> einzigartig sind.
  */
 
-public class Stuhl extends Produkt
-{
+public class Stuhl extends Produkt {
     /**
      * Instanzvariabeln:
      *
@@ -19,19 +18,18 @@ public class Stuhl extends Produkt
      * kartoneinheiten      = Anzahl Kartoneinheiten, welche zur Herstellung eines Stuhls benötigt werden (int).
      * produktionsZeit      = Produktionszeit in Stunden (int), die zur Produktion eines Stuhls nötig ist.
      */ 
-    static private int holzeinheiten;
-    static private int schrauben;
-    static private int farbeinheiten;
-    static private int kartoneinheiten;
-    static private int produktionsZeit;
+    private static int holzeinheiten;
+    private static int schrauben;
+    private static int farbeinheiten;
+    private static int kartoneinheiten;
+    private static int produktionsZeit;
 
     /**
      * Konstruktor für Objekte der Klasse Stuhl
      * Dieser initialisiert alle Instanzvariabeln der Klasse Produkt
      */
-    public Stuhl(int zustand)
-    {
-        super (zustand);
+    public Stuhl() {
+        super (1);
         holzeinheiten = 2;
         schrauben = 10;
         farbeinheiten = 2;
@@ -65,7 +63,7 @@ public class Stuhl extends Produkt
     
     /**
      * Methode getKartoneinheiten():
-     * Gibt die Anzahl benötigter Kartoneinheiten für die Produktion eines STuhls zurück.
+     * Gibt die Anzahl benötigter Kartoneinheiten für die Produktion eines Stuhls zurück.
      */
     public int getKartoneinheiten() {
         return kartoneinheiten;

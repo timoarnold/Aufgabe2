@@ -7,8 +7,7 @@ import java.io.*;
  * Die Klasse Fabrik bildet die Schnittstelle zwischen Kund:innen und Produktion.
  * Sie nimmt Bestellungen entgegen und verwaltet diese.
  */
-public class Fabrik
-{
+public class Fabrik {
     /** 
      * Instanzvariabeln:
      * 
@@ -23,8 +22,7 @@ public class Fabrik
      * Konstruktor für Objekte der Klasse Fabrik: Hier werden die Instanzvariabeln initialisiert.
      */
     
-    public Fabrik()
-    {
+    public Fabrik() {
         bestellungen = new ArrayList<Bestellung>();
         bestellungsNr = 0;
     }
@@ -37,13 +35,13 @@ public class Fabrik
      * Ausserdem die Inputs des Users überprüft, sodass die geforderten Informationen angegeben werden.
      */
     
-    public static void main(String[] args){
+    public static void main(String[] args) {
         
         System.out.println("Ausgabe aus der main()-Methode:");
         Fabrik fabrik= new Fabrik();
         
         boolean weiterBestellen = true;
-        boolean invaliderInput = false;
+        boolean validerInput = true;
         
         BufferedReader infile = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Willkommen bei AEKI");
@@ -54,35 +52,33 @@ public class Fabrik
             String weiterBestellenString;
             
             try{
-                if(!invaliderInput){
+                if(validerInput){
                     System.out.println("Geben Sie die Anzahl Sofas an, welche Sie bestellen möchten: ");
                     anzahlSofas = Integer.parseInt(infile.readLine().trim());
                     System.out.println("Geben Sie die Anzahl Stühle an, welche Sie bestellen möchten: ");
                     anzahlStühle = Integer.parseInt(infile.readLine().trim());
                     fabrik.bestellungAufgeben(anzahlSofas, anzahlStühle);
-                    }
+                }
                 System.out.print("Möchten Sie weiter bestellen? (ja/nein)");
                 weiterBestellenString = infile.readLine();
                 if(weiterBestellenString.equals("ja")){
-                    weiterBestellen = true;
-                    invaliderInput = false;
-                    } 
+                    validerInput = true;
+                } 
                 else if(weiterBestellenString.equals("nein")){
                     weiterBestellen = false;
-                    invaliderInput = false;
-                    }
+                    validerInput = true;
+                }
                 else{
                     System.out.println("Invalider Input. Bitte geben Sie ja oder nein ein.");
-                    invaliderInput = true;
-                    }
-                } 
-            catch (Exception E){
-                System.out.println("Invalider Input. Bitte geben Sie eine Zahl ein.");
+                    validerInput = false;
                 }
-            
+            } 
+            catch(Exception E){
+                System.out.println("Invalider Input. Bitte geben Sie eine Zahl ein.");
             }
-        fabrik.bestellungenAusgeben();
         }
+        fabrik.bestellungenAusgeben();
+    }
         
     
     /** 
@@ -91,7 +87,7 @@ public class Fabrik
      * Bei jeder erfolgreichen Bestellausgabe, wird auf der Konsole eine Message ausgespielt.
      * In der folgenden Methode wird zudem festgelegt, dass die Bestellung nur positive Werte enthalten darf (Keine Minusbestellungen, sonst Fehlermeldung).
      */
-    public void bestellungAufgeben(int sofa, int stuhl){
+    public void bestellungAufgeben(int sofa, int stuhl) {
           if (sofa<0 || stuhl<0 || sofa+stuhl==0){
                System.out.println("Bitte geben sie eine positiven Bestellbetrag ein");
            }
@@ -104,14 +100,13 @@ public class Fabrik
            
                System.out.println("Bestellung erfolgreich aufgegeben");
            }
-           
     }
     
     /**
      * Methode gibBestellungsNr: 
      * Gibt die Totale Anzahl der aufgegebenen Bestellungen aus.
      */
-    public int gibBestellungsNr(){
+    public int gibBestellungsNr() {
         return bestellungsNr;
     }
     
@@ -120,7 +115,7 @@ public class Fabrik
      * Gibt die Bestellungsinformationen aus.
      * Hier: Gibt die Bestellungsinformationen für den Unit-Test zur Methode BestellungAifgeben wieder.
      */
-    public ArrayList<Bestellung> gibBestellungen(){
+    public ArrayList<Bestellung> gibBestellungen() {
         return bestellungen;
     }
    

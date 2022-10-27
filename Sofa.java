@@ -8,8 +8,7 @@
  * Zudem enthält sie Variabeln, welche für den Produkttyp <Sofa> einzigartig sind.
  */
 
-public class Sofa extends Produkt
-{
+public class Sofa extends Produkt {
     /**
      * Instanzvariabeln:
      *
@@ -21,20 +20,19 @@ public class Sofa extends Produkt
      * produktionsZeit      = Produktionszeit in Stunden (int), die zur Produktion eines Sofas nötig ist.
      */ 
     
-    static private int holzeinheiten;
-    static private int schrauben;
-    static private int kissen;
-    static private int farbeinheiten;
-    static private int kartoneinheiten;
-    static private int produktionsZeit;
+    private static int holzeinheiten;
+    private static int schrauben;
+    private static int kissen;
+    private static int farbeinheiten;
+    private static int kartoneinheiten;
+    private static int produktionsZeit;
 
     /**
      * Konstruktor für Objekte der Klasse Sofa
      * Dieser initialisiert alle Instanzvariabeln der Klasse Produkt
      */
-    public Sofa(int zustand)
-    {
-        super(zustand); 
+    public Sofa() {
+        super(1); 
         holzeinheiten = 4;
         schrauben = 5;
         kissen = 5;

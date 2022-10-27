@@ -7,8 +7,7 @@ import java.util.ArrayList;
  * Produkte gespeichert werden. Dies können Sofas oder Stühle sein.
  */
 
-public class Bestellung
-{
+public class Bestellung {
     /** 
      * InstanzVariabeln:
      * 
@@ -41,16 +40,15 @@ public class Bestellung
      * Konstruktor der Klasse Bestellung
      * Dieser initialisiert alle Instanzvariabeln der Klasse Bestellung. Bei der Initalisierung der Klasse Bestellung wird auch gleichzeitig die ArrayList "bestellteProdukte" mit der Anzahl an bestellten Stühlen und Sofas aufgefüllt.
      */
-    public Bestellung(int anzahlStuehle, int anzahlSofas)
-    {
+    public Bestellung(int anzahlStuehle, int anzahlSofas) {
         bestellteProdukte = new ArrayList<Produkt>();
         
         for (int i = 0; i < anzahlStuehle; i++){
-        bestellteProdukte.add(new Stuhl(1));
+        bestellteProdukte.add(new Stuhl());
         }
         
         for (int i = 0; i < anzahlSofas; i++){
-        bestellteProdukte.add(new Sofa(1));
+        bestellteProdukte.add(new Sofa());
         }
         
         bestellBestaetigung = false;
@@ -65,8 +63,7 @@ public class Bestellung
      * Bestätigt die Bestellung.
      */
     
-    public void bestellungBestaetigen()
-    {
+    public void bestellungBestaetigen() {
         bestellBestaetigung = true;
     }
     
@@ -74,8 +71,7 @@ public class Bestellung
      * Methode gibBestellbestaetigung: 
      * Gibt die Bestellbestätigung aus.
      */
-    public boolean gibBestellBestaetigung()
-    {
+    public boolean gibBestellBestaetigung() {
         return bestellBestaetigung;
     }
     
@@ -83,8 +79,7 @@ public class Bestellung
      * Methode setzBeschaffungsZeit: 
      * Ermöglicht das manuelle Setzen der jeweiligen Beschaffungszeit in Abstimmung mit den Lieferanten
      */
-    public void setzBeschaffungsZeit(int neueBeschaffungsZeit)
-    {
+    public void setzBeschaffungsZeit(int neueBeschaffungsZeit) {
         beschaffungsZeit = neueBeschaffungsZeit; 
     }
     
@@ -92,8 +87,7 @@ public class Bestellung
      * Methode gibBeschaffungszeit:
      * Gibt die gesetzte Beschaffungszeit aus
      */
-    public int gibBeschaffungszeit()
-    {
+    public int gibBeschaffungszeit() {
         return beschaffungsZeit;
     }
    
@@ -101,8 +95,7 @@ public class Bestellung
      * Methode gibBestellNummer:
      * Gibt die jeweilige Nummer einer Bestellung aus
      */
-    public int gibBestellNummer()
-    {
+    public int gibBestellNummer() {
         return bestellNummer;
     }
     
@@ -110,8 +103,7 @@ public class Bestellung
      * Methode gibAnzahlStuehle:
      * Gibt die Anzahl bestellter Stühle in einer Bestellung aus
      */
-    public int gibAnzahlStuehle()
-    {
+    public int gibAnzahlStuehle() {
         return anzahlStuehle;
     }
     
@@ -119,8 +111,7 @@ public class Bestellung
      * Methode gibAnzahlSofas:
      * Gibt die Anzahl bestellter Sofas in einer Bestellung aus
      */
-    public int gibAnzahlSofas()
-    {
+    public int gibAnzahlSofas() {
         return anzahlSofas;
     }
     
@@ -129,8 +120,7 @@ public class Bestellung
      * Wandelt die Konsolenausgabe der Methode bestellungenAusgeben in die Form String um, 
      * damit diese im Unit-Test auf Übereinstimmung getestet werden kann.
      */
-    public String toString()
-    {
+    public String toString() {
         return "Bestellnummer:" + bestellNummer + "\nStühle bestellt:" + anzahlStuehle + "\nSofas bestellt:" + anzahlSofas;
     }
     
@@ -138,7 +128,7 @@ public class Bestellung
      * Methode resetBestellnummerGenerator:
      * Setzt die Klassenvariabel BestellnummerGenerator auf 0 zurück. Dies dient u. A. zum Unit-Testing.
      */
-    public static void resetBestellnummerGenerator(){
+    public static void resetBestellnummerGenerator() {
         BestellnummerGenerator = 1;
     }
 }
