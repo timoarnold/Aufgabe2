@@ -43,7 +43,7 @@ public class Sofa extends Produkt {
 
     /**
      * Gib die Anzahl Holzeinheiten wieder.
-     * @param: Anzahl benötigter Holzeinheiten für die Produktion eines Sofas.
+     * @return die Anzahl benötigter Holzeinheiten für die Produktion eines Sofas
      */
     public int getHolzeinheiten() {
         return holzeinheiten;
@@ -51,7 +51,7 @@ public class Sofa extends Produkt {
     
     /**
      * Gib die Anzahl Schrauben wieder.
-     * @param: Anzahl benötigter Schrauben für die Produktion eines Sofas.
+     * @return die Anzahl benötigter Schrauben für die Produktion eines Sofas
      */
     public int getSchrauben() {
         return schrauben;
@@ -59,7 +59,7 @@ public class Sofa extends Produkt {
     
     /**
      * Gib die Anzahl Kissen wieder.
-     * @param: Anzahl benötigter Kissen für die Produktion eines Sofas.
+     * @return die Anzahl benötigter Kissen für die Produktion eines Sofas
      */
     public int getKissen() {
         return kissen;
@@ -67,7 +67,7 @@ public class Sofa extends Produkt {
     
     /**
      * Gib die Anzahl Farbeinheiten wieder.
-     * @param: Anzahl benötigter Farbeinheiten für die Produktion eines Sofas.
+     * @return die Anzahl benötigter Farbeinheiten für die Produktion eines Sofas
      */
     public int getFarbEinheiten() {
         return farbeinheiten;
@@ -75,7 +75,7 @@ public class Sofa extends Produkt {
     
     /**
      * Gib die Anzahl Kartoneinheiten wieder.
-     * @param: Anzahl benötigter Kartoneinheiten für die Produktion eines Sofas.
+     * @return die Anzahl benötigter Kartoneinheiten für die Produktion eines Sofas
      */
     public int getKartoneinheiten() {
         return kartoneinheiten;
@@ -83,7 +83,7 @@ public class Sofa extends Produkt {
     
     /**
      * Gib die Produktionszeit wieder.
-     * @param: Produktionszeit für ein Sofa.
+     * @return die Produktionszeit für ein Sofa
      */
     public int getProduktionsZeit() {
         return produktionsZeit;

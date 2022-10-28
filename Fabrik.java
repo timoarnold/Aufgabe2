@@ -11,8 +11,8 @@ public class Fabrik {
     /** 
      * Instanzvariabeln:
      * 
-     * bestellungen         = Eine Array-Liste, in der alle eingegangenen Bestellungen als Typ <Bestellung> abgespeichert werden.
-     * bestellungsNr        = Eine Bestellungsnummer, welche jeder Bestellung aufsteigend zugeordnet wird, beginnend bei 1. (int)
+     * @param bestellungen: Array-Liste, in der alle eingegangenen Bestellungen als Typ <Bestellung> abgespeichert werden.
+     * @param bestellungsNr: Nummer, welche jeder Bestellung aufsteigend zugeordnet wird, beginnend bei 1 (int).
      */
    
     private ArrayList<Bestellung> bestellungen; 
@@ -20,6 +20,7 @@ public class Fabrik {
 
     /**
      * Konstruktor für Objekte der Klasse Fabrik: Hier werden die Instanzvariabeln initialisiert.
+     * @param: (Siehe oben)
      */
     
     public Fabrik() {
@@ -28,8 +29,11 @@ public class Fabrik {
     }
 
     /**
-     * Main-Methode
-     * Durch die Main-Methode wird ein Dioalogsystem aufgerufen, in welcher der User Bestellungen für Sofas und Stühle aufgeben kann (Durchführung der Methode bestellungAufgeben).
+     * Ermöglichst den EInstieg ins Programm
+     * @param weiterBestellen: Gibt an, ob weiterbestellt wird oder nicht.
+     * @param validerInput: Gibt an, ob die Bestelleingabe valide ist oder nicht.
+     * 
+     * Anmerkung: Durch die Main-Methode wird ein Dioalogsystem aufgerufen, in welcher der User Bestellungen für Sofas und Stühle aufgeben kann (Durchführung der Methode bestellungAufgeben).
      * Der User kann nach einer Bestellung entscheiden, ob er weiter bestellen möchte.
      * Sobald sich der User entscheidet, nicht mehr weiterzubestellen, wird eine Zusammenfassung der Bestellungen ausgegeben (Durchführung der Methode bestellungsAusgeben).
      * Ausserdem die Inputs des Users überprüft, sodass die geforderten Informationen angegeben werden.
@@ -82,8 +86,11 @@ public class Fabrik {
         
     
     /** 
-     * Methode bestellungAufgeben:
-     * Durch bestellungAufgeben wird eine neue Instanz der Klasse Bestellung erstellt, die Bestellung bestätigt und in der Array "bestellungen" gespeichert. 
+     * Bestellung aufgeben.
+     * @param sofa: Anzahl Sofas, die in einer Bestellung bestellt wurden.
+     * @param stuhl: Anzahl Stühle, die in einer Bestellung bestellt wurden.
+     * 
+     * Anmerkung: Durch bestellungAufgeben wird eine neue Instanz der Klasse Bestellung erstellt, die Bestellung bestätigt und in der Array "bestellungen" gespeichert. 
      * Bei jeder erfolgreichen Bestellausgabe, wird auf der Konsole eine Message ausgespielt.
      * In der folgenden Methode wird zudem festgelegt, dass die Bestellung nur positive Werte enthalten darf (Keine Minusbestellungen, sonst Fehlermeldung).
      */
@@ -103,25 +110,29 @@ public class Fabrik {
     }
     
     /**
-     * Methode gibBestellungsNr: 
-     * Gibt die Totale Anzahl der aufgegebenen Bestellungen aus.
+     * Gib die Bestellungsnummer wieder.
+     * @return die Nummer der letzten Bestellung, die aufgegeben wurde (=Totale Anzahl Bestellungen bisher)
      */
     public int gibBestellungsNr() {
         return bestellungsNr;
     }
     
     /**
-     * Methode gibBestellungen: 
-     * Gibt die Bestellungsinformationen aus.
-     * Hier: Gibt die Bestellungsinformationen für den Unit-Test zur Methode BestellungAifgeben wieder.
+     * Gib die Bestellungen wieder.
+     * @param bestellungen: Arrayliste aller aufgegebenen Bestellungen.
+     * @return ArrayListe bestellungen
+     * 
+     * Anmerkung: Diese Methode dient der Testklasse FabrikTest und gibt die Bestellungsinformationen für den Unit-Test zur Methode BestellungAufgeben wieder.
      */
     public ArrayList<Bestellung> gibBestellungen() {
         return bestellungen;
     }
    
     /**
-     * Methode bestellungenAusgeben:
-     * Für jede Bestellung aus der Liste bestellungen, gibt die Konsole die unten programmierte Print-Meldung aus. 
+     * Gib die Bestellungen inkl. Details wieder.
+     * @param bestellungen: Arrayliste aller aufgegebenen Bestellungen.
+     * 
+     * Anmerkung: Für jede Bestellung aus der Liste bestellungen, gibt die Konsole die unten programmierte Print-Meldung aus. 
      * Diese Methode gibt somit alle Informationen (Anzahl Stühle / Anzahl Sofas / Bestellungen Total / Bestellungsnummer) 
      * für alle aufgegebenen Bestellungen wieder.
      */
@@ -137,9 +148,10 @@ public class Fabrik {
     }
     
     /**
-     * Methode bestellungAusgeben:
-     * Gibt die Informationen einer bestimmten Bestellung wieder. 
-     * Dazu muss diese Methode mit der gewünschten Bestellungsnummer aufgerufen werden.
+     * Gib die Informationen einer spezifischen Bestellung wieder.
+     * @param espannendeBestellungNr: Nummer einer einzelnen, ausgegebenen Bestellung.
+     *   
+     * Anmerkung: Dazu muss diese Methode mit der gewünschten Bestellungsnummer aufgerufen werden.
      */
     public void bestellungAusgeben(int spannendeBestellungNr) {
         

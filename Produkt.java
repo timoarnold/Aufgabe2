@@ -19,7 +19,7 @@ public class Produkt {
 
     /**
      * Konstruktor für Objekte der Klasse Produkt: initialisiert alle Instanzvariabeln der Klasse Produkt.
-     * @param (Siehe oben)
+     * @param zustand: Aktueller Zustand eines Produkts (int).
      */
     public Produkt(int zustand)
     {
@@ -41,7 +41,7 @@ public class Produkt {
     
     /**
      * Gib den aktuellen Zustand eines Produkts wieder.
-     * @param aktuellerZustand: Beschreibt den aktuellen Produktzustand.
+     * @return den aktuellen Produktzustand
      */
     public int alktuellerZustand()
     {

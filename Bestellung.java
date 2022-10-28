@@ -40,7 +40,9 @@ public class Bestellung {
     /**
      * Konstruktor der Klasse Bestellung: initialisiert alle Instanzvariabeln der Klasse Bestellung. 
      * Bei der Initalisierung der Klasse Bestellung wird auch gleichzeitig die ArrayList "bestellteProdukte" mit der Anzahl an bestellten Stühlen und Sofas aufgefüllt.
-     * @param: (Siehe oben)
+     * 
+     * @param anzahlSofas: Anzahl bestellter Sofas einer Bestellung.
+     * @param anzahlStuehle: Anzahl bestellter Stühle einer Bestellung.
      */
     
     public Bestellung(int anzahlStuehle, int anzahlSofas) {
@@ -63,7 +65,8 @@ public class Bestellung {
 
     /**
      * Bestellung bestätigen.
-     * @param bestellBestaetigung: Gibt an, ob eine Bestellung bestätigt wurde.
+     * @param bestellBestaetigung: Gibt an, ob die Bestellung abgschlossen und bestätigt wurde(true).
+     * 
      * Anmerkung: Falls noch nicht bestätigt, bleibt dieser Parameter 'false'.
      */
     
@@ -73,7 +76,7 @@ public class Bestellung {
     
     /**
      * Gib die bestellBestaetigung wieder. 
-     * @param bestellBestaetigung: Gibt an, ob eine Bestellung bestätigt wurde.
+     * @return Bestellbestätigung
      */
     public boolean gibBestellBestaetigung() {
         return bestellBestaetigung;
@@ -89,7 +92,7 @@ public class Bestellung {
     
     /**
      * Gib die Beschaffungszeit wieder.
-     * @param beschaffungsZeit: Aktuell gesetzte Beschaffungszeit.
+     * @return die aktuell gesetzte Beschaffungszeit
      */
     public int gibBeschaffungszeit() {
         return beschaffungsZeit;
@@ -97,7 +100,7 @@ public class Bestellung {
    
     /**
      * Gib die Bestellnummer wieder.
-     * @param bestellNummer: Nummer einer Bestellung.
+     * @return Nummer einer Bestellung
      */
     public int gibBestellNummer() {
         return bestellNummer;
@@ -105,7 +108,7 @@ public class Bestellung {
     
     /**
      * Gib die Anzahl Stuehle wieder.
-     * @param anzahlStuehle: Anzahl Stühle in einer Bestellung.
+     * @return die Anzahl Stühle in einer Bestellung
      */
     public int gibAnzahlStuehle() {
         return anzahlStuehle;
@@ -113,7 +116,7 @@ public class Bestellung {
     
     /**
      * Gib die Anzahl Sofas wieder.
-     * @param anzahlSofas: Anzahl Sofas in einer Bestellung.
+     * @return die Anzahl Sofas in einer Bestellung
      */
     public int gibAnzahlSofas() {
         return anzahlSofas;
@@ -121,9 +124,7 @@ public class Bestellung {
     
     /**
      * Wandelt unterschiedliche Typen in den Typ String um.
-     * @param bestellNummer: Nummer einer Bestellung.
-     * @param anzahlStuehle: Anzahl Stühle in einer Bestellung.
-     * @param anzahlSofas: Anzahl Sofas in einer Bestellung.
+     * @return die Bestellnummer, die Anzahl Stühle und die Anzahl Sofas in der Form des nachfolgend definierten Strings
      * 
      * Anmerkung: Wandelt die Konsolenausgabe der Methode bestellungenAusgeben in die Form String um, 
      * damit diese im Unit-Test auf Übereinstimmung getestet werden kann.
