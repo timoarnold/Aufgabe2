@@ -1,13 +1,13 @@
 #BlueJ class context
 comment0.target=Produkt
-comment0.text=\ \n\ @author\ Gruppe\ 29\n\ @version\ 1.0\ (25.\ Oktober\ 2022)\n\ \n\ Die\ Klasse\ Produkt\ bildet\ die\ Superklasse\ der\ beiden\ Produkte\ Stuhl\ &\ Sofa.\n\ Sie\ enth\u00E4lt\ globale\ Variabeln\ f\u00FCr\ diese\ beiden\ Produkte\ /\ Variabeln,\ welche\ bei\ Stuhl\ &\ Sofa\ identisch\ sind.\n
+comment0.text=\ \r\n\ @author\ Gruppe\ 29\r\n\ @version\ 1.0\ (25.\ Oktober\ 2022)\r\n\ \r\n\ Die\ Klasse\ Produkt\ bildet\ die\ Superklasse\ der\ beiden\ Produkte\ Stuhl\ &\ Sofa.\r\n\ Sie\ enth\u00E4lt\ globale\ Variabeln\ f\u00FCr\ diese\ beiden\ Produkte\ /\ Variabeln,\ welche\ bei\ Stuhl\ &\ Sofa\ identisch\ sind.\r\n
 comment1.params=zustand
 comment1.target=Produkt(int)
-comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Produkt.\n\ Dieser\ initialisiert\ alle\ Instanzvariabeln\ der\ Klasse\ Produkt\n
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Produkt\:\ initialisiert\ alle\ Instanzvariabeln\ der\ Klasse\ Produkt.\r\n\ @param\ (Siehe\ oben)\r\n
 comment2.params=neuerZustand
 comment2.target=void\ zustandAendern(int)
-comment2.text=\n\ Methode\ zustandAendern\:\n\ Manuelle\ Wahl\ eines\ Produktzustands,\ wobei\:\n\ Zustand\ 1\ \=\ bestellt\ \n\ Zustand\ 2\ \=\ in\ Produktion\n\ Zustand\ 3\ \=\ versandbereit\n\ Zustand\ 4\ \=\ versendet\n
+comment2.text=\r\n\ Produktzustand\ \u00E4ndern,\ wobei\:\r\n\ Zustand\ 1\ \=\ bestellt\ \r\n\ Zustand\ 2\ \=\ in\ Produktion\r\n\ Zustand\ 3\ \=\ versandbereit\r\n\ Zustand\ 4\ \=\ versendet\r\n\ @param\ neuerZustand\:\ Definiert\ den\ neuen\ Zustand,\ in\ den\ ein\ Produkt\ eintritt.\r\n
 comment3.params=
 comment3.target=int\ alktuellerZustand()
-comment3.text=\n\ Methode\ aktuellerZustand\:\n\ Gibt\ den\ aktuellen\ Zustand\ eines\ Produkts\ wieder.\n
+comment3.text=\r\n\ Gib\ den\ aktuellen\ Zustand\ eines\ Produkts\ wieder.\r\n\ @param\ aktuellerZustand\:\ Beschreibt\ den\ aktuellen\ Produktzustand.\r\n
 numComments=4

@@ -9,17 +9,17 @@
 
 public class Produkt {
     /**
-     * Instanzvariabeln:
+     * Instanzvariabeln: 
      * 
-     * zustand              = Beschreibt den aktuellen Zustand eines Produkts (int). 
-     *                        Anmerkung: Bisher noch int-Wert, der manuell eingegeben werden kann für jeden Produkt-Zustand (bspw. "bestellt = 1")
+     * @param zustand: Aktueller Zustand eines Produkts (int). 
+     * Anmerkung: Bisher noch int-Wert, der manuell eingegeben werden kann für jeden Produkt-Zustand (bspw. "bestellt = 1")
      */
     
     private int zustand;
 
     /**
-     * Konstruktor für Objekte der Klasse Produkt.
-     * Dieser initialisiert alle Instanzvariabeln der Klasse Produkt
+     * Konstruktor für Objekte der Klasse Produkt: initialisiert alle Instanzvariabeln der Klasse Produkt.
+     * @param (Siehe oben)
      */
     public Produkt(int zustand)
     {
@@ -27,12 +27,12 @@ public class Produkt {
     }
 
     /**
-     * Methode zustandAendern:
-     * Manuelle Wahl eines Produktzustands, wobei:
+     * Produktzustand ändern, wobei:
      * Zustand 1 = bestellt 
      * Zustand 2 = in Produktion
      * Zustand 3 = versandbereit
      * Zustand 4 = versendet
+     * @param neuerZustand: Definiert den neuen Zustand, in den ein Produkt eintritt.
      */
     public void zustandAendern(int neuerZustand)
     {
@@ -40,8 +40,8 @@ public class Produkt {
     }
     
     /**
-     * Methode aktuellerZustand:
-     * Gibt den aktuellen Zustand eines Produkts wieder.
+     * Gib den aktuellen Zustand eines Produkts wieder.
+     * @param aktuellerZustand: Beschreibt den aktuellen Produktzustand.
      */
     public int alktuellerZustand()
     {
