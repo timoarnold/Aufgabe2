@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  * @author Gruppe 29
- * @version 1.0 (25. Oktober 2022)
+ * @version 1.0 (28. Oktober 2022)
  * 
  * Die Test-Klasse FabrikTest verwaltet alle Unit-Tests der Software. 
  */

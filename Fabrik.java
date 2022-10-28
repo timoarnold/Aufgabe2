@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.io.*;
 /**
  * @author Gruppe 29
- * @version 1.0 (25. Oktober 2022)
+ * @version 1.0 (28. Oktober 2022)
  * 
  * Die Klasse Fabrik bildet die Schnittstelle zwischen Kund:innen und Produktion.
  * Sie nimmt Bestellungen entgegen und verwaltet diese.
